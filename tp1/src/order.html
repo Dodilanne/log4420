@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OnlineShop - Commande</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="assets/img/logo.svg" alt="Online logo"></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="products.html">Produits</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="shopping-cart.html">Panier</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page order-page">
+      <form action="./confirmation.html">
+        <h1>Commande</h1>
+        <fieldset>
+          <legend>Contact</legend>
+          <p>
+            <label for="first-name">Prénom</label>
+            <input id="first-name" type="text" name="first-name" required />
+          </p>
+          <p>
+            <label for="last-name">Nom</label>
+            <input id="last-name" type="text" name="last-name" required />
+          </p>
+          <p>
+            <label for="email">Adresse courriel</label>
+            <input id="email" type="email" name="email" required />
+          </p>
+          <p>
+            <label for="phone">Numéro de téléphone</label>
+            <input id="phone" type="tel" name="phone" required pattern="[0-9]{10}" />
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Paiement</legend>
+          <p>
+            <label for="credit-card">Numéro de carte de crédit</label>
+            <input id="credit-card" type="text" name="credit-card" required pattern="[0-9]{13,16}" />
+          </p>
+          <p>
+            <label for="credit-card-expiry">Date d'expiration de la carte</label>
+            <input id="credit-card-expiry" type="text" name="credit-card-expiry" required />
+          </p>
+          <input type="submit" value="Payer" />
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <p>Audet, Vincent - 1884126 Chaussé-Cossio,Pablo - 1899191</p>
+    </footer>
+  </body>
+</html>
