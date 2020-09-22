@@ -1,18 +1,38 @@
 /* General */
-html, body {
+html,
+body {
   overflow-x: hidden;
   height: 100%;
   margin: 0;
   font-family: sans-serif;
 }
 main {
-  margin-bottom: -71px; /* Footer height */
   min-height: calc(100% - 61px); /* Full height - Header height */
+  max-width: 1200px;
+  margin: 0 auto -71px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 /* Fonts */
 h1 {
   margin-top: 0;
+}
+
+/* UI Components */
+.btn {
+  display: flex;
+  width: fit-content;
+  background-color: #14597f;
+  border-radius: 4px;
+  border: solid 1px #0b2d3d;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out;
+  color: white;
+  padding: 10px;
+}
+.btn:hover {
+  background-color: #1fb5e9;
 }
 
 /* Layout */
@@ -25,6 +45,8 @@ h1 {
   display: flex;
   width: 100%;
   max-width: 1200px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 .row {
   display: flex;
@@ -40,8 +62,10 @@ header {
   height: 60px;
   background-color: #14597f;
   border-bottom: 1px solid #0b2d3d;
+  box-sizing: border-box;
 }
 header .wrapper {
+  box-sizing: border-box;
   justify-content: space-between;
 }
 header .logo-wrapper {
@@ -112,4 +136,12 @@ footer {
   height: 70px;
   background-color: #eeeeee;
   border-top: 1px solid #cccccc;
+}
+
+/* Home */
+#home-img {
+  top: 0;
+  float: right;
+  width: 100%;
+  max-width: 500px;
 }
