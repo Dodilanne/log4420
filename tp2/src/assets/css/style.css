@@ -35,6 +35,11 @@ h1 {
   background-color: #1fb5e9;
 }
 
+.form-control input{
+  border: 1px solid #999999;
+  border-radius: 4px;
+}
+
 /* Layout */
 .container {
   display: flex;
