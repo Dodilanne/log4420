@@ -179,6 +179,8 @@ footer {
   box-sizing: border-box;
 }
 .products-container {
+  display: flex;
+  box-sizing: border-box;
   width: 75%;
 }
 .products-side-bar .list {
@@ -205,4 +207,36 @@ footer {
 }
 .products-side-bar button.selected {
   background-color: #ddf2fb;
+}
+#products-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 20px;
+  row-gap: 20px;
+}
+#products-list img {
+  width: 100%;
+  padding: 3%;
+  box-sizing: border-box;
+}
+#products-list a {
+  width: 100%;
+  box-sizing: border-box;
+  border: solid 1px #999999;
+  border-radius: 4px;
+  padding: 10px;
+  text-decoration: none !important;
+  transition: background-color 200ms ease-out;
+  color: black !important;
+}
+#products-list a:hover {
+  cursor: pointer;
+  background-color: #f3f3f3;
+}
+#products-list a h3{
+  margin: 0;
+}
+#products-list a p{
+  margin: 0;
+  align-self: flex-end;
 }
