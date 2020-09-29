@@ -6,8 +6,11 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
+body {
+  overflow-y: scroll;
+}
 main {
-  min-height: calc(100% - 61px); /* Full height - Header height */
+  min-height: calc(100% - 60px); /* Full height - Header height */
   max-width: 1200px;
   margin: 0 auto -71px;
   padding: 20px;
@@ -34,17 +37,17 @@ h1 {
 .btn:hover {
   background-color: #1fb5e9;
 }
-.form-control .row{
+.form-control .row {
   align-items: center;
 }
-.form-control input{
+.form-control input {
   border: 1px solid #999999;
   border-radius: 4px;
   width: 40px;
   margin: 0 5px;
   padding: 5px;
 }
-.form-control button>i{
+.form-control button > i {
   margin-right: 5px;
 }
 /* Layout */
@@ -68,7 +71,7 @@ h1 {
   display: flex;
   flex-direction: column;
 }
-.row.space-between{
+.row.space-between {
   justify-content: space-between;
 }
 /* Header */
@@ -159,9 +162,9 @@ footer {
   width: 100%;
   max-width: 500px;
 }
-#product-content{
+#product-content {
   border-bottom: 1px dashed #000;
 }
-#product-price{
+#product-price {
   margin: 10px 0;
 }
