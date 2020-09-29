@@ -74,6 +74,9 @@ h1 {
 .row.space-between {
   justify-content: space-between;
 }
+.rounded {
+  border-radius: 4px;
+}
 /* Header */
 header {
   height: 60px;
@@ -167,4 +170,39 @@ footer {
 }
 #product-price {
   margin: 10px 0;
+}
+
+/* Products */
+.products-side-bar {
+  width: 25%;
+  padding-right: 3%;
+  box-sizing: border-box;
+}
+.products-container {
+  width: 75%;
+}
+.products-side-bar .list {
+  border: solid 1px #999999;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.products-side-bar h4 {
+  margin: 0 0 10px 0;
+}
+.products-side-bar button:not(:last-child) {
+  border-bottom: solid 1px #999999;
+}
+.products-side-bar button {
+  background-color: white;
+  outline: none;
+  border: none;
+  padding: 8px 0;
+  transition: background-color 200ms ease-out;
+}
+.products-side-bar button:not(.selected):hover {
+  cursor: pointer;
+  background-color: #f3f3f3;
+}
+.products-side-bar button.selected {
+  background-color: #ddf2fb;
 }
