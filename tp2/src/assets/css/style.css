@@ -253,3 +253,25 @@ footer {
 #product-quantity{
   width: 40px;
 }
+/* Order */
+#order-form button[type="submit"]{
+  float: right;
+}
+#order-form input{
+  margin: 5px 0;
+}
+#order-form .row{
+  margin-top:10px;
+}
+#order-form .row:first-child{
+  margin-top:0;
+}
+#order-form .row .col{
+  margin-left:20px;
+}
+#order-form .row .col:first-child{
+  margin-left:0;
+}
+#order-form label{
+  font-weight: bold;
+}
