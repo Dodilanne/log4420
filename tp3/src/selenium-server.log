@@ -1,0 +1,1618 @@
+13:12:24.129 INFO - Selenium build info: version: '3.4.0', revision: 'unknown'
+13:12:24.130 INFO - Launching a standalone Selenium Server
+2020-10-05 13:12:24.149:INFO::main: Logging initialized @358ms to org.seleniumhq.jetty9.util.log.StdErrLog
+13:12:24.213 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+13:12:24.213 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+Unable to create new instances on this machine.
+13:12:24.213 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+13:12:24.213 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+13:12:24.214 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+ registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN10
+2020-10-05 13:12:24.261:INFO:osjs.Server:main: jetty-9.4.3.v20170317
+2020-10-05 13:12:24.307:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@d8355a8{/,null,AVAILABLE}
+2020-10-05 13:12:24.641:INFO:osjs.AbstractConnector:main: Started ServerConnector@3f49dace{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
+2020-10-05 13:12:24.642:INFO:osjs.Server:main: Started @850ms
+13:12:24.642 INFO - Selenium Server is up and running
+13:12:25.349 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+13:12:25.370 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=1 Products, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+13:12:25.383 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=1 Products, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 33752
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+13:12:29.501 INFO - Detected dialect: W3C
+13:12:29.518 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=1 Products, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+13:12:29.534 INFO - Executing: [get: http://localhost:8000/products.html])
+13:12:30.244 INFO - Done: [get: http://localhost:8000/products.html]
+13:12:30.256 INFO - Executing: [find elements: By.cssSelector: #products-list])
+13:12:30.291 INFO - Done: [find elements: By.cssSelector: #products-list]
+13:12:30.487 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:30.512 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:31.030 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:31.053 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:31.573 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:31.596 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:32.117 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:32.140 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:32.663 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:32.685 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:33.208 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:33.231 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:33.750 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:33.770 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:34.288 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:34.307 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:34.824 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:34.844 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:35.351 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:35.370 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:35.877 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:35.896 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:35.905 INFO - Executing: [find elements: By.cssSelector: #products-list > *])
+13:12:35.909 INFO - Executing: [find elements: By.cssSelector: #product-categories])
+13:12:35.934 INFO - Done: [find elements: By.cssSelector: #products-list > *]
+13:12:35.942 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]])
+13:12:35.950 INFO - Done: [find elements: By.cssSelector: #product-categories]
+13:12:36.001 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]]
+13:12:36.006 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]])
+13:12:36.031 INFO - Done: [get text: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]]
+13:12:36.037 INFO - Executing: [find child element: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *], By.cssSelector: img])
+13:12:36.056 INFO - Done: [find child element: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *], By.cssSelector: img]
+13:12:36.061 INFO - Executing: [get element attribute: 8 [[[[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]] -> css selector: img], src])
+13:12:36.083 INFO - Done: [get element attribute: 8 [[[[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]] -> css selector: img], src]
+13:12:36.088 INFO - Executing: [tag name: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]])
+13:12:36.111 INFO - Done: [tag name: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]]
+13:12:36.115 INFO - Executing: [get element attribute: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *], href])
+13:12:36.129 INFO - Done: [get element attribute: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *], href]
+13:12:36.140 INFO - Executing: [find elements: By.cssSelector: #product-criteria])
+13:12:36.168 INFO - Done: [find elements: By.cssSelector: #product-criteria]
+13:12:36.177 INFO - Executing: [find elements: By.cssSelector: #product-criteria > button])
+13:12:36.202 INFO - Done: [find elements: By.cssSelector: #product-criteria > button]
+13:12:36.226 INFO - Executing: [get text: 10 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #product-criteria > button]])
+13:12:36.290 INFO - Done: [get text: 10 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #product-criteria > button]]
+13:12:36.295 INFO - Executing: [click: 10 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #product-criteria > button]])
+13:12:36.366 INFO - Done: [click: 10 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #product-criteria > button]]
+13:12:36.525 INFO - Executing: [get value of css property: 10 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #product-criteria > button], selected])
+13:12:36.547 INFO - Done: [get value of css property: 10 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #product-criteria > button], selected]
+13:12:36.551 INFO - Executing: [find elements: By.cssSelector: #product-criteria > button:not(.selected)])
+13:12:36.583 INFO - Done: [find elements: By.cssSelector: #product-criteria > button:not(.selected)]
+13:12:36.602 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:36.622 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:37.128 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:37.148 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:37.667 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:37.686 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:38.206 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:38.227 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:38.747 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:38.766 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:39.276 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:39.298 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:39.815 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:39.835 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:40.349 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:40.373 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:40.892 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:40.912 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:41.422 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:41.446 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:41.968 INFO - Executing: [find elements: By.cssSelector: #products-count])
+13:12:41.993 INFO - Done: [find elements: By.cssSelector: #products-count]
+13:12:42.052 INFO - Executing: [find elements: By.cssSelector: #products-list > *])
+13:12:42.052 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=2 Product, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+13:12:42.054 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=2 Product, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+13:12:42.068 INFO - Done: [find elements: By.cssSelector: #products-list > *]
+13:12:42.075 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]])
+13:12:42.125 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]]
+13:12:42.130 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]])
+13:12:42.145 INFO - Done: [get text: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]]
+13:12:42.150 INFO - Executing: [find child element: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *], By.cssSelector: img])
+Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 35976
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+13:12:42.171 INFO - Done: [find child element: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *], By.cssSelector: img]
+13:12:42.176 INFO - Executing: [get element attribute: 8 [[[[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]] -> css selector: img], src])
+13:12:42.199 INFO - Done: [get element attribute: 8 [[[[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]] -> css selector: img], src]
+13:12:42.202 INFO - Executing: [tag name: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]])
+13:12:42.213 INFO - Done: [tag name: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *]]
+13:12:42.216 INFO - Executing: [get element attribute: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *], href])
+13:12:42.229 INFO - Done: [get element attribute: 1 [[ChromeDriver: chrome on ANY (882cff5e78700da4e1f21b8059902db3)] -> css selector: #products-list > *], href]
+13:12:45.340 INFO - Detected dialect: W3C
+13:12:45.343 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=2 Product, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+13:12:45.355 INFO - Executing: [get: http://localhost:8000/product.html?id=1])
+13:12:46.063 INFO - Done: [get: http://localhost:8000/product.html?id=1]
+13:12:46.248 INFO - Executing: [find elements: By.cssSelector: #product-name])
+13:12:46.282 INFO - Done: [find elements: By.cssSelector: #product-name]
+13:12:46.793 INFO - Executing: [find elements: By.cssSelector: #product-name])
+13:12:46.814 INFO - Done: [find elements: By.cssSelector: #product-name]
+13:12:47.324 INFO - Executing: [find elements: By.cssSelector: #product-name])
+13:12:47.347 INFO - Done: [find elements: By.cssSelector: #product-name]
+13:12:47.853 INFO - Executing: [find elements: By.cssSelector: #product-name])
+13:12:47.878 INFO - Done: [find elements: By.cssSelector: #product-name]
+13:12:48.399 INFO - Executing: [find elements: By.cssSelector: #product-name])
+13:12:48.422 INFO - Done: [find elements: By.cssSelector: #product-name]
+13:12:48.929 INFO - Executing: [find elements: By.cssSelector: #product-name])
+13:12:48.952 INFO - Done: [find elements: By.cssSelector: #product-name]
+13:12:49.472 INFO - Executing: [find elements: By.cssSelector: #product-name])
+13:12:49.496 INFO - Done: [find elements: By.cssSelector: #product-name]
+13:12:50.016 INFO - Executing: [find elements: By.cssSelector: #product-name])
+13:12:50.040 INFO - Done: [find elements: By.cssSelector: #product-name]
+13:12:50.560 INFO - Executing: [find elements: By.cssSelector: #product-name])
+13:12:50.587 INFO - Done: [find elements: By.cssSelector: #product-name]
+13:12:51.104 INFO - Executing: [find elements: By.cssSelector: #product-name])
+13:12:51.127 INFO - Done: [find elements: By.cssSelector: #product-name]
+13:12:51.633 INFO - Executing: [find elements: By.cssSelector: #product-name])
+13:12:51.658 INFO - Done: [find elements: By.cssSelector: #product-name]
+13:12:51.673 INFO - Executing: [get: http://localhost:8000/product.html?id=140])
+13:12:51.777 INFO - Done: [get: http://localhost:8000/product.html?id=140]
+13:12:51.960 INFO - Executing: [find elements: By.cssSelector: h1])
+13:12:51.997 INFO - Done: [find elements: By.cssSelector: h1]
+13:12:52.002 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]])
+13:12:52.032 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]]
+13:12:52.563 INFO - Executing: [find elements: By.cssSelector: h1])
+13:12:52.583 INFO - Done: [find elements: By.cssSelector: h1]
+13:12:52.587 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]])
+13:12:52.598 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]]
+13:12:53.133 INFO - Executing: [find elements: By.cssSelector: h1])
+13:12:53.153 INFO - Done: [find elements: By.cssSelector: h1]
+13:12:53.156 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]])
+13:12:53.169 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]]
+13:12:53.690 INFO - Executing: [find elements: By.cssSelector: h1])
+13:12:53.711 INFO - Done: [find elements: By.cssSelector: h1]
+13:12:53.714 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]])
+13:12:53.727 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]]
+13:12:54.259 INFO - Executing: [find elements: By.cssSelector: h1])
+13:12:54.280 INFO - Done: [find elements: By.cssSelector: h1]
+13:12:54.283 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]])
+13:12:54.294 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]]
+13:12:54.817 INFO - Executing: [find elements: By.cssSelector: h1])
+13:12:54.837 INFO - Done: [find elements: By.cssSelector: h1]
+13:12:54.840 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]])
+13:12:54.853 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]]
+13:12:55.384 INFO - Executing: [find elements: By.cssSelector: h1])
+13:12:55.404 INFO - Done: [find elements: By.cssSelector: h1]
+13:12:55.407 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]])
+13:12:55.419 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]]
+13:12:55.941 INFO - Executing: [find elements: By.cssSelector: h1])
+13:12:55.961 INFO - Done: [find elements: By.cssSelector: h1]
+13:12:55.964 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]])
+13:12:55.977 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]]
+13:12:56.511 INFO - Executing: [find elements: By.cssSelector: h1])
+13:12:56.531 INFO - Done: [find elements: By.cssSelector: h1]
+13:12:56.534 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]])
+13:12:56.546 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]]
+13:12:57.067 INFO - Executing: [find elements: By.cssSelector: h1])
+13:12:57.087 INFO - Done: [find elements: By.cssSelector: h1]
+13:12:57.090 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]])
+13:12:57.103 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: h1]]
+13:12:57.112 INFO - Executing: [get: http://localhost:8000/product.html?id=1])
+13:12:57.210 INFO - Done: [get: http://localhost:8000/product.html?id=1]
+13:12:57.389 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:12:57.426 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:12:57.429 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]])
+13:12:57.476 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]]
+13:12:58.007 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:12:58.031 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:12:58.036 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]])
+13:12:58.069 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]]
+13:12:58.596 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:12:58.620 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:12:58.625 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]])
+13:12:58.659 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]]
+13:12:59.188 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:12:59.214 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:12:59.220 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]])
+13:12:59.250 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]]
+13:12:59.778 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:12:59.803 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:12:59.809 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]])
+13:12:59.840 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]]
+13:13:00.370 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:13:00.394 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:13:00.400 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]])
+13:13:00.431 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]]
+13:13:00.959 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:13:00.984 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:13:00.989 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]])
+13:13:01.023 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]]
+13:13:01.551 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:13:01.577 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:13:01.584 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]])
+13:13:01.607 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]]
+13:13:02.129 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:13:02.150 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:13:02.154 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]])
+13:13:02.184 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]]
+13:13:02.720 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:13:02.745 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:13:02.750 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]])
+13:13:02.780 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on ANY (0a9197624ae519522bdc0822ca3a7722)] -> css selector: .shopping-cart > .count]]
+13:13:02.835 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=3 Shopping Cart, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+13:13:02.836 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=3 Shopping Cart, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 18942
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+13:13:06.108 INFO - Detected dialect: W3C
+13:13:06.111 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=3 Shopping Cart, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+13:13:06.122 INFO - Executing: [get: http://localhost:8000/shopping-cart.html])
+13:13:06.863 INFO - Done: [get: http://localhost:8000/shopping-cart.html]
+13:13:07.039 INFO - Executing: [find elements: By.cssSelector: h1])
+13:13:07.064 INFO - Done: [find elements: By.cssSelector: h1]
+13:13:07.067 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1]])
+13:13:07.097 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1]]
+13:13:07.116 INFO - Executing: [find elements: By.cssSelector: h1 + *])
+13:13:07.141 INFO - Done: [find elements: By.cssSelector: h1 + *]
+13:13:07.145 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]])
+13:13:07.198 INFO - Done: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]]
+13:13:07.726 INFO - Executing: [find elements: By.cssSelector: h1 + *])
+13:13:07.752 INFO - Done: [find elements: By.cssSelector: h1 + *]
+13:13:07.758 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]])
+13:13:07.819 INFO - Done: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]]
+13:13:08.348 INFO - Executing: [find elements: By.cssSelector: h1 + *])
+13:13:08.372 INFO - Done: [find elements: By.cssSelector: h1 + *]
+13:13:08.378 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]])
+13:13:08.441 INFO - Done: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]]
+13:13:08.966 INFO - Executing: [find elements: By.cssSelector: h1 + *])
+13:13:08.986 INFO - Done: [find elements: By.cssSelector: h1 + *]
+13:13:08.989 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]])
+13:13:09.022 INFO - Done: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]]
+13:13:09.542 INFO - Executing: [find elements: By.cssSelector: h1 + *])
+13:13:09.568 INFO - Done: [find elements: By.cssSelector: h1 + *]
+13:13:09.574 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]])
+13:13:09.627 INFO - Done: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]]
+13:13:10.161 INFO - Executing: [find elements: By.cssSelector: h1 + *])
+13:13:10.182 INFO - Done: [find elements: By.cssSelector: h1 + *]
+13:13:10.185 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]])
+13:13:10.217 INFO - Done: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]]
+13:13:10.748 INFO - Executing: [find elements: By.cssSelector: h1 + *])
+13:13:10.768 INFO - Done: [find elements: By.cssSelector: h1 + *]
+13:13:10.771 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]])
+13:13:10.806 INFO - Done: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]]
+13:13:11.334 INFO - Executing: [find elements: By.cssSelector: h1 + *])
+13:13:11.355 INFO - Done: [find elements: By.cssSelector: h1 + *]
+13:13:11.358 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]])
+13:13:11.389 INFO - Done: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]]
+13:13:11.915 INFO - Executing: [find elements: By.cssSelector: h1 + *])
+13:13:11.938 INFO - Done: [find elements: By.cssSelector: h1 + *]
+13:13:11.941 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]])
+13:13:11.971 INFO - Done: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]]
+13:13:12.501 INFO - Executing: [find elements: By.cssSelector: h1 + *])
+13:13:12.521 INFO - Done: [find elements: By.cssSelector: h1 + *]
+13:13:12.524 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]])
+13:13:12.558 INFO - Done: [get text: 1 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: h1 + *]]
+13:13:12.573 INFO - Executing: [get: http://localhost:8000/product.html?id=1])
+13:13:12.728 INFO - Done: [get: http://localhost:8000/product.html?id=1]
+13:13:12.904 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:12.928 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:13.443 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:13.465 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:13.980 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:14.001 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:14.505 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:14.525 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:15.043 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:15.064 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:15.568 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:15.588 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:16.101 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:16.125 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:16.635 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:16.661 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:17.171 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:17.195 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:17.701 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:17.725 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:18.245 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:18.269 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:18.276 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:18.300 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:18.809 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:18.833 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:19.338 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:19.361 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:19.869 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:19.893 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:20.414 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:20.440 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:20.961 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:20.985 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:21.503 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:21.524 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:22.036 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:22.061 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:22.569 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:22.593 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:23.112 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:23.137 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:23.658 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:23.681 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:23.689 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:23.730 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:24.246 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:24.271 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:24.790 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:24.815 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:25.337 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:25.360 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:25.869 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:25.894 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:26.413 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:26.437 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:26.944 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:26.969 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:27.490 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:27.515 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:28.032 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:28.053 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:28.557 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:28.577 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:29.085 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:29.110 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:29.116 INFO - Executing: [get: http://localhost:8000/product.html?id=2])
+13:13:29.516 INFO - Done: [get: http://localhost:8000/product.html?id=2]
+13:13:29.688 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:29.709 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:30.216 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:30.237 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:30.744 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:30.764 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:31.272 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:31.292 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:31.798 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:31.819 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:32.330 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:32.354 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:32.859 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:32.882 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:33.392 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:33.418 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:33.937 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:33.961 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:34.476 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:34.496 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:35.009 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:35.033 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:35.039 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:35.063 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:35.568 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:35.593 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:36.099 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:36.119 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:36.629 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:36.653 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:37.160 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:37.186 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:37.695 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:37.722 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:38.238 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:38.263 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:38.778 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:38.798 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:39.309 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:39.328 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:39.834 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:39.854 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:40.363 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:40.385 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:40.391 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:40.424 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:40.933 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:40.954 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:41.464 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:41.485 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:41.996 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:42.019 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:42.540 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:42.564 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:43.072 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:43.095 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:43.616 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:43.638 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:44.143 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:44.168 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:44.684 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:44.705 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:45.216 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:45.240 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:45.747 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:45.767 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:45.772 INFO - Executing: [get: http://localhost:8000/product.html?id=4])
+13:13:46.178 INFO - Done: [get: http://localhost:8000/product.html?id=4]
+13:13:46.355 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:46.380 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:46.899 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:46.923 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:47.436 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:47.456 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:47.966 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:47.990 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:48.502 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:48.527 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:49.040 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:49.063 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:49.580 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:49.600 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:50.110 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:50.129 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:50.635 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:50.656 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:51.164 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:51.185 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:51.697 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:51.721 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:51.727 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:51.752 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:52.262 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:52.286 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:52.806 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:52.831 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:53.337 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:53.361 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:53.870 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:53.893 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:54.398 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:54.417 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:54.927 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:54.952 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:55.471 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:55.495 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:56.014 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:56.038 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:56.556 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:56.576 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:57.083 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:13:57.103 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:13:57.107 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:57.123 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:57.631 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:57.656 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:58.164 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:58.189 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:58.694 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:58.718 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:59.238 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:59.262 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:13:59.768 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:13:59.793 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:00.314 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:00.336 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:00.843 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:00.864 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:01.371 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:01.395 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:01.905 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:01.929 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:02.439 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:02.458 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:02.463 INFO - Executing: [get: http://localhost:8000/product.html?id=12])
+13:14:02.868 INFO - Done: [get: http://localhost:8000/product.html?id=12]
+13:14:03.042 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:03.067 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:03.576 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:03.600 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:04.107 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:04.132 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:04.641 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:04.665 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:05.182 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:05.207 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:05.725 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:05.746 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:06.260 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:06.283 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:06.793 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:06.817 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:07.323 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:07.347 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:07.865 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:07.889 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:08.401 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:08.422 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:08.426 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:08.437 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:08.947 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:08.973 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:09.492 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:09.512 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:10.024 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:10.049 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:10.569 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:10.593 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:11.100 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:11.123 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:11.628 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:11.648 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:12.157 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:12.181 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:12.688 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:12.712 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:13.233 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:13.256 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:13.761 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:13.786 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:13.792 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:13.815 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:14.319 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:14.338 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:14.852 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:14.875 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:15.397 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:15.421 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:15.929 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:15.953 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:16.470 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:16.495 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:17.016 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:17.039 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:17.555 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:17.575 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:18.086 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:18.109 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:18.618 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:18.641 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:19.148 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:19.173 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:19.180 INFO - Executing: [get: http://localhost:8000/product.html?id=7])
+13:14:19.581 INFO - Done: [get: http://localhost:8000/product.html?id=7]
+13:14:19.740 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:19.765 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:20.281 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:20.301 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:20.810 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:20.834 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:21.343 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:21.376 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:21.884 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:21.913 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:22.429 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:22.453 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:22.963 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:22.987 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:23.506 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:23.530 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:24.038 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:24.058 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:24.574 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:24.598 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:25.118 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:25.143 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:25.149 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:25.175 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:25.681 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:25.704 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:26.225 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:26.249 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:26.756 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:26.780 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:27.299 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:27.323 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:27.831 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:27.855 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:28.373 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:28.397 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:28.916 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:28.937 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:29.446 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:29.470 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:29.988 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:30.009 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:30.517 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:30.538 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:30.542 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:30.556 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:31.063 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:31.086 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:31.606 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:31.629 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:32.136 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:32.154 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:32.668 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:32.693 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:33.213 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:33.236 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:33.753 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:33.778 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:34.297 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:34.321 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:34.840 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:34.865 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:35.371 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:35.396 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:35.915 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:35.941 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:35.948 INFO - Executing: [get: http://localhost:8000/product.html?id=13])
+13:14:36.363 INFO - Done: [get: http://localhost:8000/product.html?id=13]
+13:14:36.536 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:36.561 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:37.076 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:37.101 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:37.622 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:37.645 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:38.162 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:38.188 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:38.695 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:38.720 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:39.227 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:39.250 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:39.769 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:39.794 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:40.298 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:40.328 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:40.845 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:40.870 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:41.386 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:41.406 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:41.916 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:41.941 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:41.948 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:41.971 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:42.489 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:42.513 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:43.034 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:43.055 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:43.565 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:43.590 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:44.102 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:44.126 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:44.644 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:44.670 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:45.184 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:45.205 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:45.711 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:45.731 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:46.242 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:46.265 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:46.783 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:46.807 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:47.326 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:47.350 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:47.357 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:47.381 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:47.891 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:47.917 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:48.435 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:48.460 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:48.964 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:48.989 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:49.496 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:49.521 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:50.040 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:50.063 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:50.572 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:50.594 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:51.098 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:51.122 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:51.629 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:51.649 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:52.160 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:52.184 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:52.693 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:14:52.718 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:14:52.724 INFO - Executing: [get: http://localhost:8000/product.html?id=8])
+13:14:53.130 INFO - Done: [get: http://localhost:8000/product.html?id=8]
+13:14:53.302 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:53.326 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:53.839 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:53.863 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:54.370 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:54.393 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:54.897 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:54.922 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:55.443 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:55.468 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:55.973 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:55.996 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:56.502 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:56.525 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:57.035 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:57.059 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:57.567 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:57.592 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:58.113 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:58.136 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:58.657 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:58.680 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:58.685 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:58.712 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:59.229 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:59.253 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:14:59.774 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:14:59.798 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:00.306 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:00.330 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:00.838 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:00.864 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:01.373 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:01.397 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:01.917 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:01.937 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:02.449 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:02.472 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:02.977 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:03.002 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:03.507 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:03.532 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:04.051 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:04.076 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:04.082 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:04.107 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:04.616 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:04.642 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:05.148 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:05.171 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:05.681 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:05.700 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:06.206 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:06.231 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:06.743 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:06.766 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:07.275 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:07.299 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:07.819 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:07.843 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:08.353 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:08.378 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:08.885 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:08.910 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:09.429 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:09.453 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:09.459 INFO - Executing: [get: http://localhost:8000/product.html?id=5])
+13:15:09.862 INFO - Done: [get: http://localhost:8000/product.html?id=5]
+13:15:10.025 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:10.065 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:10.583 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:10.608 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:11.112 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:11.132 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:11.643 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:11.667 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:12.176 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:12.197 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:12.704 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:12.729 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:13.247 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:13.270 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:13.777 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:13.800 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:14.306 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:14.327 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:14.842 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:14.866 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:15.381 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:15.408 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:15.413 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:15.434 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:15.940 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:15.965 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:16.482 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:16.506 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:17.012 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:17.035 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:17.544 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:17.568 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:18.075 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:18.100 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:18.620 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:18.644 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:19.150 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:19.175 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:19.697 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:19.721 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:20.232 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:20.256 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:20.767 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:20.791 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:20.796 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:20.823 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:21.335 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:21.357 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:21.868 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:21.893 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:22.397 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:22.418 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:22.930 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:22.954 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:23.458 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:23.479 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:23.985 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:24.009 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:24.515 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:24.536 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:25.045 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:25.069 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:25.576 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:25.601 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:26.107 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:26.131 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:26.137 INFO - Executing: [get: http://localhost:8000/product.html?id=6])
+13:15:26.544 INFO - Done: [get: http://localhost:8000/product.html?id=6]
+13:15:26.710 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:26.731 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:27.245 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:27.269 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:27.787 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:27.807 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:28.319 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:28.345 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:28.851 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:28.879 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:29.384 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:29.408 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:29.914 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:29.939 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:30.458 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:30.483 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:31.003 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:31.026 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:31.532 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:31.556 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:32.075 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:32.099 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:32.104 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:32.132 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:32.651 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:32.675 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:33.181 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:33.205 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:33.711 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:33.731 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:34.243 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:34.267 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:34.787 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:34.811 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:35.331 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:35.355 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:35.861 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:35.884 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:36.395 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:36.420 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:36.939 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:36.964 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:37.470 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:37.494 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:37.499 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:37.526 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:38.030 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:38.055 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:38.560 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:38.584 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:39.091 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:39.116 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:39.623 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:39.649 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:40.155 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:40.179 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:40.686 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:40.711 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:41.230 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:41.253 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:41.765 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:41.789 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:42.294 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:42.318 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:42.838 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:42.862 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:42.868 INFO - Executing: [get: http://localhost:8000/product.html?id=10])
+13:15:43.279 INFO - Done: [get: http://localhost:8000/product.html?id=10]
+13:15:43.449 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:43.473 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:43.991 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:44.010 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:44.522 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:44.547 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:45.054 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:45.079 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:45.587 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:45.614 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:46.122 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:46.148 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:46.665 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:46.686 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:47.196 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:47.220 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:47.727 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:47.752 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:48.261 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:48.283 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:48.801 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:48.821 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:48.824 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:48.836 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:49.348 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:49.372 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:49.880 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:49.904 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:50.415 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:50.439 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:50.957 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:50.982 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:51.502 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:51.525 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:52.034 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:52.058 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:52.564 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:52.589 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:53.108 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:53.132 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:53.639 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:53.664 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:54.170 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:15:54.196 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:15:54.202 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:54.224 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:54.739 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:54.764 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:55.271 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:55.296 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:55.807 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:55.832 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:56.342 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:56.367 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:56.873 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:56.893 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:57.404 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:57.429 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:57.934 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:57.959 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:58.465 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:58.489 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:58.995 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:59.018 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:59.525 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:15:59.549 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:15:59.555 INFO - Executing: [get: http://localhost:8000/shopping-cart.html])
+13:15:59.959 INFO - Done: [get: http://localhost:8000/shopping-cart.html]
+13:16:00.115 INFO - Executing: [find elements: By.cssSelector: table tr])
+13:16:00.141 INFO - Done: [find elements: By.cssSelector: table tr]
+13:16:00.147 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: table tr]])
+13:16:00.180 INFO - Done: [get text: 3 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: table tr]]
+13:16:00.188 INFO - Executing: [find elements: By.cssSelector: .remove-item-button])
+13:16:00.202 INFO - Done: [find elements: By.cssSelector: .remove-item-button]
+13:16:00.708 INFO - Executing: [find elements: By.cssSelector: .remove-item-button])
+13:16:00.732 INFO - Done: [find elements: By.cssSelector: .remove-item-button]
+13:16:01.240 INFO - Executing: [find elements: By.cssSelector: .remove-item-button])
+13:16:01.264 INFO - Done: [find elements: By.cssSelector: .remove-item-button]
+13:16:01.771 INFO - Executing: [find elements: By.cssSelector: .remove-item-button])
+13:16:01.797 INFO - Done: [find elements: By.cssSelector: .remove-item-button]
+13:16:02.316 INFO - Executing: [find elements: By.cssSelector: .remove-item-button])
+13:16:02.342 INFO - Done: [find elements: By.cssSelector: .remove-item-button]
+13:16:02.858 INFO - Executing: [find elements: By.cssSelector: .remove-item-button])
+13:16:02.883 INFO - Done: [find elements: By.cssSelector: .remove-item-button]
+13:16:03.400 INFO - Executing: [find elements: By.cssSelector: .remove-item-button])
+13:16:03.426 INFO - Done: [find elements: By.cssSelector: .remove-item-button]
+13:16:03.944 INFO - Executing: [find elements: By.cssSelector: .remove-item-button])
+13:16:03.968 INFO - Done: [find elements: By.cssSelector: .remove-item-button]
+13:16:04.475 INFO - Executing: [find elements: By.cssSelector: .remove-item-button])
+13:16:04.491 INFO - Done: [find elements: By.cssSelector: .remove-item-button]
+13:16:05.007 INFO - Executing: [find elements: By.cssSelector: .remove-item-button])
+13:16:05.032 INFO - Done: [find elements: By.cssSelector: .remove-item-button]
+13:16:05.540 INFO - Executing: [find elements: By.cssSelector: .remove-item-button])
+13:16:05.565 INFO - Done: [find elements: By.cssSelector: .remove-item-button]
+13:16:05.571 INFO - Executing: [dismiss alert])
+13:16:05.593 INFO - HTTP Status: '404' -> incorrect JSON status mapping for 'no such alert' (400 expected)
+13:16:05.612 WARN - Exception thrown
+org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: chrome=85.0.4183.121)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-OR94KAE', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}), userDataDir=C:\Users\vinca\AppData\Local\Temp\scoped_dir18800_333324812}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:54313}, acceptInsecureCerts=false, browserVersion=85.0.4183.121, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:virtualAuthenticators=true}]
+Session ID: 38078ca74e64a7b550e582f8aa3d0f62
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1020)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringTargetLocator.alert(EventFiringWebDriver.java:612)
+	at org.openqa.selenium.remote.server.handler.DismissAlert.call(DismissAlert.java:30)
+	at org.openqa.selenium.remote.server.handler.DismissAlert.call(DismissAlert.java:22)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+13:16:05.616 WARN - Exception: no such alert
+  (Session info: chrome=85.0.4183.121)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-OR94KAE', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}), userDataDir=C:\Users\vinca\AppData\Local\Temp\scoped_dir18800_333324812}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:54313}, acceptInsecureCerts=false, browserVersion=85.0.4183.121, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:virtualAuthenticators=true}]
+Session ID: 38078ca74e64a7b550e582f8aa3d0f62
+13:16:05.801 INFO - Executing: [find elements: By.cssSelector: table tr])
+13:16:05.822 INFO - Done: [find elements: By.cssSelector: table tr]
+13:16:05.827 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: table tr]])
+13:16:05.843 INFO - Done: [get text: 3 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: table tr]]
+13:16:05.849 INFO - Executing: [find elements: By.cssSelector: .add-quantity-button])
+13:16:05.872 INFO - Done: [find elements: By.cssSelector: .add-quantity-button]
+13:16:06.389 INFO - Executing: [find elements: By.cssSelector: .add-quantity-button])
+13:16:06.414 INFO - Done: [find elements: By.cssSelector: .add-quantity-button]
+13:16:06.920 INFO - Executing: [find elements: By.cssSelector: .add-quantity-button])
+13:16:06.945 INFO - Done: [find elements: By.cssSelector: .add-quantity-button]
+13:16:07.450 INFO - Executing: [find elements: By.cssSelector: .add-quantity-button])
+13:16:07.474 INFO - Done: [find elements: By.cssSelector: .add-quantity-button]
+13:16:07.982 INFO - Executing: [find elements: By.cssSelector: .add-quantity-button])
+13:16:08.006 INFO - Done: [find elements: By.cssSelector: .add-quantity-button]
+13:16:08.526 INFO - Executing: [find elements: By.cssSelector: .add-quantity-button])
+13:16:08.550 INFO - Done: [find elements: By.cssSelector: .add-quantity-button]
+13:16:09.057 INFO - Executing: [find elements: By.cssSelector: .add-quantity-button])
+13:16:09.082 INFO - Done: [find elements: By.cssSelector: .add-quantity-button]
+13:16:09.601 INFO - Executing: [find elements: By.cssSelector: .add-quantity-button])
+13:16:09.626 INFO - Done: [find elements: By.cssSelector: .add-quantity-button]
+13:16:10.132 INFO - Executing: [find elements: By.cssSelector: .add-quantity-button])
+13:16:10.156 INFO - Done: [find elements: By.cssSelector: .add-quantity-button]
+13:16:10.664 INFO - Executing: [find elements: By.cssSelector: .add-quantity-button])
+13:16:10.689 INFO - Done: [find elements: By.cssSelector: .add-quantity-button]
+13:16:11.208 INFO - Executing: [find elements: By.cssSelector: .add-quantity-button])
+13:16:11.232 INFO - Done: [find elements: By.cssSelector: .add-quantity-button]
+13:16:11.412 INFO - Executing: [find elements: By.cssSelector: table tr])
+13:16:11.437 INFO - Done: [find elements: By.cssSelector: table tr]
+13:16:11.446 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: table tr]])
+13:16:11.476 INFO - Done: [get text: 3 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: table tr]]
+13:16:11.482 INFO - Executing: [find elements: By.cssSelector: .remove-quantity-button])
+13:16:11.497 INFO - Done: [find elements: By.cssSelector: .remove-quantity-button]
+13:16:12.011 INFO - Executing: [find elements: By.cssSelector: .remove-quantity-button])
+13:16:12.028 INFO - Done: [find elements: By.cssSelector: .remove-quantity-button]
+13:16:12.547 INFO - Executing: [find elements: By.cssSelector: .remove-quantity-button])
+13:16:12.571 INFO - Done: [find elements: By.cssSelector: .remove-quantity-button]
+13:16:13.076 INFO - Executing: [find elements: By.cssSelector: .remove-quantity-button])
+13:16:13.101 INFO - Done: [find elements: By.cssSelector: .remove-quantity-button]
+13:16:13.607 INFO - Executing: [find elements: By.cssSelector: .remove-quantity-button])
+13:16:13.632 INFO - Done: [find elements: By.cssSelector: .remove-quantity-button]
+13:16:14.137 INFO - Executing: [find elements: By.cssSelector: .remove-quantity-button])
+13:16:14.162 INFO - Done: [find elements: By.cssSelector: .remove-quantity-button]
+13:16:14.669 INFO - Executing: [find elements: By.cssSelector: .remove-quantity-button])
+13:16:14.694 INFO - Done: [find elements: By.cssSelector: .remove-quantity-button]
+13:16:15.201 INFO - Executing: [find elements: By.cssSelector: .remove-quantity-button])
+13:16:15.225 INFO - Done: [find elements: By.cssSelector: .remove-quantity-button]
+13:16:15.743 INFO - Executing: [find elements: By.cssSelector: .remove-quantity-button])
+13:16:15.769 INFO - Done: [find elements: By.cssSelector: .remove-quantity-button]
+13:16:16.290 INFO - Executing: [find elements: By.cssSelector: .remove-quantity-button])
+13:16:16.314 INFO - Done: [find elements: By.cssSelector: .remove-quantity-button]
+13:16:16.824 INFO - Executing: [find elements: By.cssSelector: .remove-quantity-button])
+13:16:16.842 INFO - Done: [find elements: By.cssSelector: .remove-quantity-button]
+13:16:17.010 INFO - Executing: [find elements: By.cssSelector: table tr])
+13:16:17.034 INFO - Done: [find elements: By.cssSelector: table tr]
+13:16:17.043 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: table tr]])
+13:16:17.077 INFO - Done: [get text: 3 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: table tr]]
+13:16:17.086 INFO - Executing: [find elements: By.cssSelector: #remove-all-items-button])
+13:16:17.113 INFO - Done: [find elements: By.cssSelector: #remove-all-items-button]
+13:16:17.618 INFO - Executing: [find elements: By.cssSelector: #remove-all-items-button])
+13:16:17.644 INFO - Done: [find elements: By.cssSelector: #remove-all-items-button]
+13:16:18.151 INFO - Executing: [find elements: By.cssSelector: #remove-all-items-button])
+13:16:18.171 INFO - Done: [find elements: By.cssSelector: #remove-all-items-button]
+13:16:18.680 INFO - Executing: [find elements: By.cssSelector: #remove-all-items-button])
+13:16:18.705 INFO - Done: [find elements: By.cssSelector: #remove-all-items-button]
+13:16:19.211 INFO - Executing: [find elements: By.cssSelector: #remove-all-items-button])
+13:16:19.236 INFO - Done: [find elements: By.cssSelector: #remove-all-items-button]
+13:16:19.743 INFO - Executing: [find elements: By.cssSelector: #remove-all-items-button])
+13:16:19.767 INFO - Done: [find elements: By.cssSelector: #remove-all-items-button]
+13:16:20.286 INFO - Executing: [find elements: By.cssSelector: #remove-all-items-button])
+13:16:20.312 INFO - Done: [find elements: By.cssSelector: #remove-all-items-button]
+13:16:20.829 INFO - Executing: [find elements: By.cssSelector: #remove-all-items-button])
+13:16:20.854 INFO - Done: [find elements: By.cssSelector: #remove-all-items-button]
+13:16:21.360 INFO - Executing: [find elements: By.cssSelector: #remove-all-items-button])
+13:16:21.398 INFO - Done: [find elements: By.cssSelector: #remove-all-items-button]
+13:16:21.903 INFO - Executing: [find elements: By.cssSelector: #remove-all-items-button])
+13:16:21.928 INFO - Done: [find elements: By.cssSelector: #remove-all-items-button]
+13:16:22.434 INFO - Executing: [find elements: By.cssSelector: #remove-all-items-button])
+13:16:22.458 INFO - Done: [find elements: By.cssSelector: #remove-all-items-button]
+13:16:22.464 INFO - Executing: [dismiss alert])
+13:16:22.480 INFO - HTTP Status: '404' -> incorrect JSON status mapping for 'no such alert' (400 expected)
+13:16:22.481 WARN - Exception thrown
+org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: chrome=85.0.4183.121)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-OR94KAE', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}), userDataDir=C:\Users\vinca\AppData\Local\Temp\scoped_dir18800_333324812}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:54313}, acceptInsecureCerts=false, browserVersion=85.0.4183.121, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:virtualAuthenticators=true}]
+Session ID: 38078ca74e64a7b550e582f8aa3d0f62
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1020)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringTargetLocator.alert(EventFiringWebDriver.java:612)
+	at org.openqa.selenium.remote.server.handler.DismissAlert.call(DismissAlert.java:30)
+	at org.openqa.selenium.remote.server.handler.DismissAlert.call(DismissAlert.java:22)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+13:16:22.481 WARN - Exception: no such alert
+  (Session info: chrome=85.0.4183.121)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-OR94KAE', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}), userDataDir=C:\Users\vinca\AppData\Local\Temp\scoped_dir18800_333324812}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:54313}, acceptInsecureCerts=false, browserVersion=85.0.4183.121, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:virtualAuthenticators=true}]
+Session ID: 38078ca74e64a7b550e582f8aa3d0f62
+13:16:22.664 INFO - Executing: [find elements: By.cssSelector: table tr])
+13:16:22.684 INFO - Done: [find elements: By.cssSelector: table tr]
+13:16:22.691 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: table tr]])
+13:16:22.705 INFO - Done: [get text: 3 [[ChromeDriver: chrome on ANY (38078ca74e64a7b550e582f8aa3d0f62)] -> css selector: table tr]]
+13:16:22.751 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=4 Order, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+13:16:22.752 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=4 Order, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 7107
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+13:16:26.042 INFO - Detected dialect: W3C
+13:16:26.044 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=4 Order, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+13:16:26.054 INFO - Executing: [get: http://localhost:8000/product.html?id=13])
+13:16:27.321 INFO - Done: [get: http://localhost:8000/product.html?id=13]
+13:16:27.325 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:27.345 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:27.853 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:27.878 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:28.396 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:28.421 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:28.939 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:28.960 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:29.474 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:29.496 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:30.003 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:30.027 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:30.533 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:30.557 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:31.064 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:31.089 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:31.607 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:31.633 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:32.149 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:32.174 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:32.679 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:32.704 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:32.709 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:32.735 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:33.254 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:33.279 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:33.785 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:33.809 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:34.322 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:34.342 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:34.848 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:34.869 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:35.386 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:35.405 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:35.912 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:35.932 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:36.438 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:36.459 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:36.976 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:36.996 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:37.512 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:37.533 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:38.039 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:38.059 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:38.063 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:16:38.079 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:16:38.595 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:16:38.615 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:16:39.120 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:16:39.141 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:16:39.649 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:16:39.672 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:16:40.179 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:16:40.205 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:16:40.709 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:16:40.733 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:16:41.251 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:16:41.275 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:16:41.795 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:16:41.819 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:16:42.329 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:16:42.354 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:16:42.869 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:16:42.893 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:16:43.414 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:16:43.438 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:16:43.444 INFO - Executing: [get: http://localhost:8000/order.html])
+13:16:43.905 INFO - Done: [get: http://localhost:8000/order.html]
+13:16:43.926 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:16:43.950 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:16:43.953 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]])
+13:16:43.985 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]]
+13:16:44.003 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:16:44.024 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:16:44.027 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]])
+13:16:44.046 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]]
+13:16:44.564 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:16:44.585 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:16:44.588 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]])
+13:16:44.600 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]]
+13:16:45.127 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:16:45.152 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:16:45.156 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]])
+13:16:45.183 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]]
+13:16:45.714 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:16:45.735 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:16:45.738 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]])
+13:16:45.751 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]]
+13:16:46.278 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:16:46.302 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:16:46.307 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]])
+13:16:46.335 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]]
+13:16:46.857 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:16:46.883 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:16:46.888 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]])
+13:16:46.909 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]]
+13:16:47.434 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:16:47.458 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:16:47.462 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]])
+13:16:47.490 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]]
+13:16:48.015 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:16:48.040 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:16:48.042 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]])
+13:16:48.064 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]]
+13:16:48.587 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:16:48.612 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:16:48.617 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]])
+13:16:48.642 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]]
+13:16:49.162 INFO - Executing: [find elements: By.cssSelector: .shopping-cart > .count])
+13:16:49.186 INFO - Done: [find elements: By.cssSelector: .shopping-cart > .count]
+13:16:49.190 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]])
+13:16:49.216 INFO - Done: [get text: 0 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: .shopping-cart > .count]]
+13:16:49.223 INFO - Executing: [get: http://localhost:8000/product.html?id=3])
+13:16:49.306 INFO - Done: [get: http://localhost:8000/product.html?id=3]
+13:16:49.311 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:49.320 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:49.831 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:49.856 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:50.363 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:50.388 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:50.906 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:50.931 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:51.449 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:51.475 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:51.992 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:52.016 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:52.538 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:52.562 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:53.074 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:53.099 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:53.619 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:53.643 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:54.147 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:54.172 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:54.677 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:54.702 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:54.707 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:54.733 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:55.239 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:55.264 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:55.775 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:55.800 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:56.305 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:56.330 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:56.838 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:56.859 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:57.365 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:57.390 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:57.895 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:57.915 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:58.427 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:58.452 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:58.960 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:58.979 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:16:59.491 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:16:59.514 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:00.033 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:00.058 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:00.063 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:00.096 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:00.610 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:00.634 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:01.139 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:01.164 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:01.672 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:01.696 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:02.212 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:02.236 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:02.746 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:02.771 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:03.288 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:03.312 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:03.818 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:03.843 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:04.349 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:04.368 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:04.879 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:04.905 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:05.409 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:05.434 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:05.440 INFO - Executing: [get: http://localhost:8000/order.html])
+13:17:05.849 INFO - Done: [get: http://localhost:8000/order.html]
+13:17:05.853 INFO - Executing: [find elements: By.cssSelector: #order-form])
+13:17:05.870 INFO - Done: [find elements: By.cssSelector: #order-form]
+13:17:05.874 INFO - Executing: [submit: 1 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #order-form]])
+13:17:05.967 INFO - Done: [submit: 1 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #order-form]]
+13:17:05.984 INFO - Executing: [get current url])
+13:17:06.001 INFO - Done: [get current url]
+13:17:06.529 INFO - Executing: [get current url])
+13:17:06.549 INFO - Done: [get current url]
+13:17:07.072 INFO - Executing: [get current url])
+13:17:07.093 INFO - Done: [get current url]
+13:17:07.616 INFO - Executing: [get current url])
+13:17:07.636 INFO - Done: [get current url]
+13:17:08.160 INFO - Executing: [get current url])
+13:17:08.180 INFO - Done: [get current url]
+13:17:08.702 INFO - Executing: [get current url])
+13:17:08.719 INFO - Done: [get current url]
+13:17:09.240 INFO - Executing: [get current url])
+13:17:09.257 INFO - Done: [get current url]
+13:17:09.787 INFO - Executing: [get current url])
+13:17:09.808 INFO - Done: [get current url]
+13:17:10.330 INFO - Executing: [get current url])
+13:17:10.350 INFO - Done: [get current url]
+13:17:10.876 INFO - Executing: [get current url])
+13:17:10.897 INFO - Done: [get current url]
+13:17:11.421 INFO - Executing: [get current url])
+13:17:11.440 INFO - Done: [get current url]
+13:17:11.453 INFO - Executing: [get: http://localhost:8000/product.html?id=7])
+13:17:11.535 INFO - Done: [get: http://localhost:8000/product.html?id=7]
+13:17:11.538 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:11.556 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:12.069 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:12.094 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:12.616 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:12.640 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:13.147 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:13.172 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:13.690 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:13.714 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:14.221 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:14.245 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:14.763 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:14.787 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:15.293 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:15.317 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:15.828 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:15.853 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:16.358 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:16.383 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:16.903 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:16.927 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:16.931 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:16.953 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:17.465 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:17.484 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:17.992 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:18.016 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:18.520 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:18.545 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:19.049 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:19.074 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:19.593 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:19.618 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:20.125 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:20.150 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:20.668 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:20.692 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:21.200 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:21.224 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:21.732 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:21.756 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:22.265 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:22.288 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:22.293 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:22.328 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:22.839 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:22.864 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:23.371 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:23.397 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:23.913 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:23.934 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:24.444 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:24.470 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:24.977 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:25.002 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:25.507 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:25.533 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:26.051 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:26.076 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:26.587 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:26.612 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:27.132 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:27.157 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:27.663 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:27.686 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:27.692 INFO - Executing: [get: http://localhost:8000/order.html])
+13:17:28.096 INFO - Done: [get: http://localhost:8000/order.html]
+13:17:28.105 INFO - Executing: [find elements: By.cssSelector: #first-name])
+13:17:28.119 INFO - Done: [find elements: By.cssSelector: #first-name]
+13:17:28.122 INFO - Executing: [clear: 2 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #first-name]])
+13:17:28.168 INFO - Done: [clear: 2 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #first-name]]
+13:17:28.171 INFO - Executing: [find elements: By.cssSelector: #first-name])
+13:17:28.188 INFO - Done: [find elements: By.cssSelector: #first-name]
+13:17:28.191 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #first-name], [A]])
+13:17:28.263 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #first-name], [A]]
+13:17:28.266 INFO - Executing: [find elements: By.cssSelector: #order-form])
+13:17:28.287 INFO - Done: [find elements: By.cssSelector: #order-form]
+13:17:28.292 INFO - Executing: [submit: 3 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #order-form]])
+13:17:28.364 INFO - Done: [submit: 3 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #order-form]]
+13:17:28.369 INFO - Executing: [find elements: By.cssSelector: #first-name-error])
+13:17:28.395 INFO - Done: [find elements: By.cssSelector: #first-name-error]
+13:17:28.914 INFO - Executing: [find elements: By.cssSelector: #first-name-error])
+13:17:28.935 INFO - Done: [find elements: By.cssSelector: #first-name-error]
+13:17:29.449 INFO - Executing: [find elements: By.cssSelector: #first-name-error])
+13:17:29.475 INFO - Done: [find elements: By.cssSelector: #first-name-error]
+13:17:29.980 INFO - Executing: [find elements: By.cssSelector: #first-name-error])
+13:17:30.001 INFO - Done: [find elements: By.cssSelector: #first-name-error]
+13:17:30.517 INFO - Executing: [find elements: By.cssSelector: #first-name-error])
+13:17:30.541 INFO - Done: [find elements: By.cssSelector: #first-name-error]
+13:17:31.051 INFO - Executing: [find elements: By.cssSelector: #first-name-error])
+13:17:31.076 INFO - Done: [find elements: By.cssSelector: #first-name-error]
+13:17:31.593 INFO - Executing: [find elements: By.cssSelector: #first-name-error])
+13:17:31.617 INFO - Done: [find elements: By.cssSelector: #first-name-error]
+13:17:32.122 INFO - Executing: [find elements: By.cssSelector: #first-name-error])
+13:17:32.144 INFO - Done: [find elements: By.cssSelector: #first-name-error]
+13:17:32.662 INFO - Executing: [find elements: By.cssSelector: #first-name-error])
+13:17:32.684 INFO - Done: [find elements: By.cssSelector: #first-name-error]
+13:17:33.192 INFO - Executing: [find elements: By.cssSelector: #first-name-error])
+13:17:33.217 INFO - Done: [find elements: By.cssSelector: #first-name-error]
+13:17:33.734 INFO - Executing: [find elements: By.cssSelector: #first-name-error])
+13:17:33.758 INFO - Done: [find elements: By.cssSelector: #first-name-error]
+13:17:33.770 INFO - Executing: [get: http://localhost:8000/product.html?id=8])
+13:17:33.860 INFO - Done: [get: http://localhost:8000/product.html?id=8]
+13:17:33.864 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:33.878 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:34.385 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:34.411 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:34.929 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:34.954 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:35.473 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:35.498 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:36.007 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:36.029 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:36.538 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:36.563 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:37.067 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:37.087 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:37.599 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:37.623 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:38.130 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:38.154 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:38.671 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:38.696 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:39.217 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:39.241 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:39.246 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:39.272 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:39.782 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:39.807 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:40.325 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:40.350 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:40.869 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:40.893 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:41.410 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:41.435 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:41.954 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:41.979 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:42.498 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:42.522 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:43.041 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:43.066 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:43.574 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:43.595 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:44.112 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:44.133 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:44.642 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form input])
+13:17:44.666 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form input]
+13:17:44.671 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:44.705 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:45.218 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:45.238 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:45.749 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:45.775 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:46.282 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:46.307 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:46.811 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:46.836 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:47.355 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:47.379 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:47.885 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:47.909 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:48.414 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:48.439 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:48.944 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:48.969 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:49.489 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:49.515 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:50.036 INFO - Executing: [find elements: By.cssSelector: #add-to-cart-form])
+13:17:50.061 INFO - Done: [find elements: By.cssSelector: #add-to-cart-form]
+13:17:50.066 INFO - Executing: [get: http://localhost:8000/order.html])
+13:17:50.480 INFO - Done: [get: http://localhost:8000/order.html]
+13:17:50.485 INFO - Executing: [find elements: By.cssSelector: #first-name])
+13:17:50.511 INFO - Done: [find elements: By.cssSelector: #first-name]
+13:17:50.514 INFO - Executing: [clear: 4 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #first-name]])
+13:17:50.562 INFO - Done: [clear: 4 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #first-name]]
+13:17:50.565 INFO - Executing: [find elements: By.cssSelector: #first-name])
+13:17:50.582 INFO - Done: [find elements: By.cssSelector: #first-name]
+13:17:50.585 INFO - Executing: [send keys: 4 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #first-name], [A, n, t, o, i, n, e]])
+13:17:50.637 INFO - Done: [send keys: 4 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #first-name], [A, n, t, o, i, n, e]]
+13:17:50.639 INFO - Executing: [find elements: By.cssSelector: #last-name])
+13:17:50.663 INFO - Done: [find elements: By.cssSelector: #last-name]
+13:17:50.665 INFO - Executing: [clear: 5 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #last-name]])
+13:17:50.716 INFO - Done: [clear: 5 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #last-name]]
+13:17:50.718 INFO - Executing: [find elements: By.cssSelector: #last-name])
+13:17:50.736 INFO - Done: [find elements: By.cssSelector: #last-name]
+13:17:50.739 INFO - Executing: [send keys: 5 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #last-name], [B, �, l, a, n, d]])
+13:17:50.787 INFO - Done: [send keys: 5 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #last-name], [B, �, l, a, n, d]]
+13:17:50.790 INFO - Executing: [find elements: By.cssSelector: #email])
+13:17:50.816 INFO - Done: [find elements: By.cssSelector: #email]
+13:17:50.819 INFO - Executing: [clear: 6 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #email]])
+13:17:50.855 INFO - Done: [clear: 6 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #email]]
+13:17:50.859 INFO - Executing: [find elements: By.cssSelector: #email])
+13:17:50.874 INFO - Done: [find elements: By.cssSelector: #email]
+13:17:50.877 INFO - Executing: [send keys: 6 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #email], [a, n, t, o, i, n, e, ., b, e, l, a, n, d, @, p, o, l, y, m, t, l, ., c, a]])
+13:17:50.944 INFO - Done: [send keys: 6 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #email], [a, n, t, o, i, n, e, ., b, e, l, a, n, d, @, p, o, l, y, m, t, l, ., c, a]]
+13:17:50.947 INFO - Executing: [find elements: By.cssSelector: #phone])
+13:17:50.970 INFO - Done: [find elements: By.cssSelector: #phone]
+13:17:50.972 INFO - Executing: [clear: 7 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #phone]])
+13:17:51.022 INFO - Done: [clear: 7 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #phone]]
+13:17:51.026 INFO - Executing: [find elements: By.cssSelector: #phone])
+13:17:51.044 INFO - Done: [find elements: By.cssSelector: #phone]
+13:17:51.046 INFO - Executing: [send keys: 7 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #phone], [5, 1, 4, -, 3, 4, 0, -, 4, 7, 1, 1]])
+13:17:51.103 INFO - Done: [send keys: 7 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #phone], [5, 1, 4, -, 3, 4, 0, -, 4, 7, 1, 1]]
+13:17:51.106 INFO - Executing: [find elements: By.cssSelector: #credit-card])
+13:17:51.125 INFO - Done: [find elements: By.cssSelector: #credit-card]
+13:17:51.127 INFO - Executing: [clear: 8 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #credit-card]])
+13:17:51.160 INFO - Done: [clear: 8 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #credit-card]]
+13:17:51.163 INFO - Executing: [find elements: By.cssSelector: #credit-card])
+13:17:51.181 INFO - Done: [find elements: By.cssSelector: #credit-card]
+13:17:51.184 INFO - Executing: [send keys: 8 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #credit-card], [4, 1, 1, 1,  , 1, 1, 1, 1,  , 1, 1, 1, 1,  , 1, 1, 1, 1]])
+13:17:51.256 INFO - Done: [send keys: 8 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #credit-card], [4, 1, 1, 1,  , 1, 1, 1, 1,  , 1, 1, 1, 1,  , 1, 1, 1, 1]]
+13:17:51.259 INFO - Executing: [find elements: By.cssSelector: #credit-card-expiry])
+13:17:51.278 INFO - Done: [find elements: By.cssSelector: #credit-card-expiry]
+13:17:51.281 INFO - Executing: [clear: 9 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #credit-card-expiry]])
+13:17:51.342 INFO - Done: [clear: 9 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #credit-card-expiry]]
+13:17:51.345 INFO - Executing: [find elements: By.cssSelector: #credit-card-expiry])
+13:17:51.366 INFO - Done: [find elements: By.cssSelector: #credit-card-expiry]
+13:17:51.370 INFO - Executing: [send keys: 9 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #credit-card-expiry], [0, 1, /, 2, 0]])
+13:17:51.419 INFO - Done: [send keys: 9 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #credit-card-expiry], [0, 1, /, 2, 0]]
+13:17:51.422 INFO - Executing: [find elements: By.cssSelector: #order-form])
+13:17:51.449 INFO - Done: [find elements: By.cssSelector: #order-form]
+13:17:51.452 INFO - Executing: [submit: 10 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #order-form]])
+13:17:51.518 INFO - Done: [submit: 10 [[ChromeDriver: chrome on ANY (096ce3ce1d856971839b3d91301a8389)] -> css selector: #order-form]]
+13:17:51.699 INFO - Executing: [get current url])
+13:17:51.719 INFO - Done: [get current url]
+13:17:51.730 INFO - Executing: [find elements: By.cssSelector: #name])
+13:17:51.755 INFO - Done: [find elements: By.cssSelector: #name]
+13:17:52.273 INFO - Executing: [find elements: By.cssSelector: #name])
+13:17:52.298 INFO - Done: [find elements: By.cssSelector: #name]
+13:17:52.805 INFO - Executing: [find elements: By.cssSelector: #name])
+13:17:52.830 INFO - Done: [find elements: By.cssSelector: #name]
+13:17:53.336 INFO - Executing: [find elements: By.cssSelector: #name])
+13:17:53.359 INFO - Done: [find elements: By.cssSelector: #name]
+13:17:53.865 INFO - Executing: [find elements: By.cssSelector: #name])
+13:17:53.888 INFO - Done: [find elements: By.cssSelector: #name]
+13:17:54.396 INFO - Executing: [find elements: By.cssSelector: #name])
+13:17:54.420 INFO - Done: [find elements: By.cssSelector: #name]
+13:17:54.926 INFO - Executing: [find elements: By.cssSelector: #name])
+13:17:54.951 INFO - Done: [find elements: By.cssSelector: #name]
+13:17:55.460 INFO - Executing: [find elements: By.cssSelector: #name])
+13:17:55.484 INFO - Done: [find elements: By.cssSelector: #name]
+13:17:55.992 INFO - Executing: [find elements: By.cssSelector: #name])
+13:17:56.015 INFO - Done: [find elements: By.cssSelector: #name]
+13:17:56.525 INFO - Executing: [find elements: By.cssSelector: #name])
+13:17:56.550 INFO - Done: [find elements: By.cssSelector: #name]
+13:17:57.055 INFO - Executing: [find elements: By.cssSelector: #name])
+13:17:57.080 INFO - Done: [find elements: By.cssSelector: #name]
+13:17:57.103 INFO - Executing: [delete session: 743dd7ea-9fca-414a-b8d8-fc4d197be155])
+13:17:58.092 INFO - Done: [delete session: 743dd7ea-9fca-414a-b8d8-fc4d197be155]

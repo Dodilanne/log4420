@@ -5,12 +5,8 @@
         "removeComments": true,
         "sourceMap": false,
         "checkJs": true,
-        "resolveJsonModule": true,
+        "resolveJsonModule": true
     },
-    "include" : [
-        "**/*.js"
-    ],
-    "exclude" : [
-        "node_modules",
-    ]
+    "include": ["**/*.js"],
+    "exclude": ["node_modules"]
 }
