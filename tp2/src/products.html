@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OnlineShop - Produits</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      ,→
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <section class="wrapper row">
+        <a href="./index.html" class="logo-wrapper">
+          <img alt="logo" src="./assets/img/logo.svg" title="Accueil" />
+        </a>
+        <nav>
+          <ul class="row">
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="./products.html" class="active">Produits</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li>
+              <a
+                class="shopping-cart"
+                href="./shopping-cart.html"
+                title="Panier"
+              >
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                  <i class="fa fa-shopping-cart fa-stack-1x"></i>
+                </span>
+                <span class="count">3</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <div class="products-page row">
+        <section aria-label="Filtres" class="products-side-bar col">
+          <section>
+            <h4>Catégories</h4>
+            <div id="product-categories" class="list col">
+              <button class="hoverable">Appareils photo</button>
+              <button class="hoverable">Consoles</button>
+              <button class="hoverable">Écrans</button>
+              <button class="hoverable">Ordinateurs</button>
+              <button class="hoverable selected">Tous les produits</button>
+            </div>
+          </section>
+          <section>
+            <h4>Classement</h4>
+            <div id="product-criteria" class="list col">
+              <button class="hoverable selected">Prix (bas-haut)</button>
+              <button class="hoverable">Prix (haut-bas)</button>
+              <button class="hoverable">Nom (A-Z)</button>
+              <button class="hoverable">Nom (Z-A)</button>
+            </div>
+          </section>
+        </section>
+        <article class="products-container col">
+          <section class="products-header row space-between">
+            <h1>Produits</h1>
+            <p>13 produits</p>
+          </section>
+          <div id="products-list">
+            <a href="./product.html" title="En savoir plus..." class="col hoverable">
+              <h3>Manette Xbox 360</h3>
+              <img
+                alt="Manette Xbox 360"
+                src="./assets/img/xbox-controller.png"
+              />
+              <p><small>Prix</small> 29,99&thinsp;$</p>
+            </a>
+            <a href="./product.html" title="En savoir plus..." class="col hoverable">
+              <h3>Moniteur 19"</h3>
+              <img alt='Moniteur 19"' src="./assets/img/monitor.png" />
+              <p><small>Prix</small> 149,99&thinsp;$</p>
+            </a>
+            <a href="./product.html" title="En savoir plus..." class="col hoverable">
+              <h3>Console Wii</h3>
+              <img alt="Console Wii" src="./assets/img/wii.png" />
+              <p><small>Prix</small> 199,99&thinsp;$</p>
+            </a>
+            <a href="./product.html" title="En savoir plus..." class="col hoverable">
+              <h3>Apple TV</h3>
+              <img alt="Apple TV" src="./assets/img/apple-tv.png" />
+              <p><small>Prix</small> 249,99&thinsp;$</p>
+            </a>
+            <a href="./product.html" title="En savoir plus..." class="col hoverable">
+              <h3>Canon PowerShot SD1300</h3>
+              <img alt="Canon PowerShot SD1300" src="./assets/img/camera-3.png" />
+              <p><small>Prix</small> 299,99&thinsp;$</p>
+            </a>
+            <a href="./product.html" title="En savoir plus..." class="col hoverable">
+              <h3>Console PS3</h3>
+              <img alt="Console PS3" src="./assets/img/ps3.png" />
+              <p><small>Prix</small> 349,99&thinsp;$</p>
+            </a>
+          </div>
+        </article>
+      </div>
+      <div class="footer-spacer"></div>
+    </main>
+    <footer>
+      <p>Par Pablo Chaussé-Cossio et Vincent Audet</p>
+    </footer>
+  </body>
+</html>
