@@ -88,7 +88,7 @@ module.exports = {
         "object-curly-newline": "error",
         "object-curly-spacing": "off",
         "one-var": ["error", "never"],
-        "operator-linebreak": ["error", "after"],
+        "operator-linebreak": ["error", "before"],
         "space-before-blocks": "error",
         "template-tag-spacing": "error",
         "no-duplicate-imports": "error",

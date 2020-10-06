@@ -13,7 +13,7 @@ const {
     PORT,
 } = require("./gulp.config.js");
 
-const STATIC_FILE_TYPES = ["html", "css", "img", "favicon"];
+const STATIC_FILE_TYPES = ["html", "css", "data", "img", "favicon"];
 const JS_FILE_TYPES = ["vendors", "scripts"];
 
 STATIC_FILE_TYPES.forEach((type) => {

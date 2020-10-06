@@ -149,6 +149,8 @@ header .fa-shopping-cart::before {
   color: #14597f;
 }
 header .shopping-cart .count {
+  visibility: hidden; /* Hidden by default */
+
   z-index: 1;
   display: flex;
   align-items: center;
