@@ -10,7 +10,7 @@ var cart = {
         const nbOfItems = Object.keys(cart.content).length;
         console.log(`Items in cart: ${nbOfItems}`);
         $(".shopping-cart > .count").css("visibility", nbOfItems < 1 ? "hidden" : "visible");
-        $("header .count").html(nbOfItems.toString());
+        $(".shopping-cart > .count").html(nbOfItems.toString());
     },
 
     addItem: (item) => {
