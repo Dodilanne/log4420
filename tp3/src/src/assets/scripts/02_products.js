@@ -15,11 +15,12 @@
     $(() => {
         if (!$("#products-list").length) return; // Not on products page
 
-        let products = [];
+        let globalProducts = [];
 
-        const getSortedProducts = () =>
-            products.sort((p1, p2) => {
-                const selectedFilter = $("#product-criteria button.selected");
+        const getSortedProducts = (products = globalProducts) => {
+            const selectedFilter = $("#product-criteria button.selected");
+
+            return products.sort((p1, p2) => {
                 const sortingKey = selectedFilter.data("sorting-key");
                 const sortingOrder = selectedFilter.data("sorting-order");
                 const isASC = sortingOrder === "asc";
@@ -29,23 +30,39 @@
 
                 return compareProducts(...sortingArray);
             });
+        };
+
+        const getFilteredProducts = (products = globalProducts) => {
+            const selectedFilter = $("#product-categories button.selected");
+            const category = selectedFilter.data("category");
+
+            if (category === "all") return products;
+
+            return products.filter((product) => product.category === category);
+        };
 
         const updateProducts = () => {
-            $("#products-list").html(
-                getSortedProducts().map(getTemplate).join("\n")
+            const products = getSortedProducts(getFilteredProducts());
+            $("#products-list").html(products.map(getTemplate).join("\n"));
+            $("#products-count").html(
+                `${products.length} produit${products.length > 1 ? "s" : ""}`
             );
         };
 
-        $("#product-criteria button").on("click", ({ target }) => {
-            if ($(target).hasClass("selected")) return; // Filter is already selected
+        ["#product-criteria button", "#product-categories button"].forEach(
+            (filterGroup) => {
+                $(filterGroup).on("click", ({ target }) => {
+                    if ($(target).hasClass("selected")) return; // Filter is already selected
 
-            $("#product-criteria button").removeClass("selected");
-            $(target).addClass("selected");
-            updateProducts();
-        });
+                    $(filterGroup).removeClass("selected");
+                    $(target).addClass("selected");
+                    updateProducts();
+                });
+            }
+        );
 
         $.getJSON("data/products.json", (res) => {
-            products = res;
+            globalProducts = res;
             updateProducts();
         });
     });

@@ -55,11 +55,13 @@
                 <section>
                     <h2>Catégories</h2>
                     <div class="btn-group vertical" id="product-categories">
-                        <button>Appareils photo</button>
-                        <button>Consoles</button>
-                        <button>Écrans</button>
-                        <button>Ordinateurs</button>
-                        <button class="selected">Tous les produits</button>
+                        <button data-category="cameras">Appareils photo</button>
+                        <button data-category="consoles">Consoles</button>
+                        <button data-category="screens">Écrans</button>
+                        <button data-category="computers">Ordinateurs</button>
+                        <button data-category="all" class="selected">
+                            Tous les produits
+                        </button>
                     </div>
                 </section>
                 <section>
@@ -94,9 +96,7 @@
                 </section>
             </section>
             <article>
-                <span class="right-header" id="products-count"
-                    >13 produits</span
-                >
+                <span class="right-header" id="products-count"></span>
                 <h1>Produits</h1>
                 <div class="products" id="products-list"></div>
             </article>
