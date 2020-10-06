@@ -15,7 +15,7 @@
         const nbOfItems = Object.keys(cart).length;
         console.log(`Items in cart: ${nbOfItems}`);
 
-        $(".shopping-cart > .count")[nbOfItems < 1 ? "hide" : "show"]();
+        $(".shopping-cart > .count").css("visibility", nbOfItems < 1 ? "hidden" : "visible");
         $("header .count").html(nbOfItems.toString());
     };
 
@@ -38,7 +38,7 @@
 
         onCartUpdate();
 
-        // Test loop
+        // Test loop (TODO: Remove it)
         let id = 1;
         setTimeout(() => {
             const interval = setInterval(() => {
