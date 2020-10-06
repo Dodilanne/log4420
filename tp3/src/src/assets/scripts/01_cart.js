@@ -15,6 +15,7 @@
         const nbOfItems = Object.keys(cart).length;
         console.log(`Items in cart: ${nbOfItems}`);
 
+        $(".shopping-cart > .count")[nbOfItems < 1 ? "hide" : "show"]();
         $("header .count").html(nbOfItems.toString());
     };
 
@@ -39,12 +40,14 @@
 
         // Test loop
         let id = 1;
-        const interval = setInterval(() => {
-            if (id === 10) clearInterval(interval);
+        setTimeout(() => {
+            const interval = setInterval(() => {
+                if (id === 10) clearInterval(interval);
 
-            addItem({ id, name: `Product ${id}` });
-            id += 1;
-            onCartUpdate();
-        }, 1000);
+                addItem({ id, name: `Product ${id}` });
+                id += 1;
+                onCartUpdate();
+            }, 1000);
+        }, 2000);
     });
 })();
