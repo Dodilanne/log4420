@@ -6,7 +6,7 @@ var cart = {
     
 
     updateCart: () => {
-        
+        cart.content =  JSON.parse(localStorage.getItem("cart"));
         const nbOfItems = Object.keys(cart.content).length;
         console.log(`Items in cart: ${nbOfItems}`);
         $(".shopping-cart > .count").css("visibility", nbOfItems < 1 ? "hidden" : "visible");
@@ -21,9 +21,15 @@ var cart = {
         localStorage.setItem("cart", JSON.stringify(cart.content));
         cart.updateCart();
     },
-
+    removeItem: (id) => {
+        delete cart.content[id];
+        localStorage.setItem("cart", JSON.stringify(cart.content));
+        cart.updateCart();
+    },
     clearCart: () => {
         localStorage.setItem("cart", JSON.stringify({}));
-        cart.updateCart()
-    }
+        cart.updateCart();
+    },
+    isEmpty: () => { return Object.keys(cart.content).length === 0 }
+    
 };
