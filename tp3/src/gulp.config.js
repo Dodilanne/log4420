@@ -6,6 +6,7 @@ module.exports = {
     paths: {
         src: {
             html: "./src/*.html",
+            favicon: "./src/assets/img/favicon/favicon.ico",
             img: "./src/assets/img/*.*",
             css: "./src/assets/css/style.css",
             scripts: "./src/assets/scripts/*.js",
@@ -13,6 +14,7 @@ module.exports = {
         },
         dest: {
             html: "/",
+            favicon: "/",
             img: "/img",
             css: "/css",
             scripts: "/js",
