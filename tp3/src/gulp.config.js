@@ -10,7 +10,7 @@ module.exports = {
             img: "./src/assets/img/*.*",
             css: "./src/assets/css/style.css",
             scripts: "./src/assets/scripts/*.js",
-            vendors: "./src/assets/vendors/jquery-3.2.1.min.js",
+            vendors: "./src/assets/vendors/*.js",
         },
         dest: {
             html: "/",
