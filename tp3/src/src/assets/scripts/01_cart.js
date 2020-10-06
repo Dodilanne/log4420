@@ -32,22 +32,7 @@
     };
 
     $(() => {
-        console.log("Hello from the cart.js script! ");
-
         clearCart();
-
         onCartUpdate();
-
-        // Test loop (TODO: Remove it)
-        let id = 1;
-        setTimeout(() => {
-            const interval = setInterval(() => {
-                if (id === 10) clearInterval(interval);
-
-                addItem({ id, name: `Product ${id}` });
-                id += 1;
-                onCartUpdate();
-            }, 1000);
-        }, 2000);
     });
 })();
