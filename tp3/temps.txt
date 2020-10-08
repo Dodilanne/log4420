@@ -2,7 +2,16 @@
 TP3
 ===
 
-Pablo: 
-Vincent: 
+Pablo : 
+	06/10 : 2h
+	08/10 : 
 
-Total: 
+	Total : 
+
+Vincent :
+	06/10 : 2h
+	08/10 : 1h30
+
+	Total : 3h30
+
+Total de l'équipe : 
