@@ -1,15 +1,16 @@
 /* global $, localStorage */
 "use strict";
 
-var cart = {
+const cart = {
     content: JSON.parse(localStorage.getItem("cart")),
-    
 
     updateCart: () => {
-        cart.content =  JSON.parse(localStorage.getItem("cart"));
+        cart.content = JSON.parse(localStorage.getItem("cart"));
         const nbOfItems = Object.keys(cart.content).length;
-        console.log(`Items in cart: ${nbOfItems}`);
-        $(".shopping-cart > .count").css("visibility", nbOfItems < 1 ? "hidden" : "visible");
+        $(".shopping-cart > .count").css(
+            "visibility",
+            nbOfItems < 1 ? "hidden" : "visible"
+        );
         $(".shopping-cart > .count").html(nbOfItems.toString());
     },
 
@@ -30,6 +31,7 @@ var cart = {
         localStorage.setItem("cart", JSON.stringify({}));
         cart.updateCart();
     },
-    isEmpty: () => { return Object.keys(cart.content).length === 0 }
-    
+    isEmpty: () => {
+        return Object.keys(cart.content).length === 0;
+    },
 };
