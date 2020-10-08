@@ -1,4 +1,4 @@
-/* global $ */
+/* global $, window */
 
 (() => {
     const getTemplate = ({ id, name, image, price }) => `<div class="product">
@@ -13,7 +13,7 @@
         typeof a === "string" ? a.localeCompare(b) : a - b;
 
     $(() => {
-        if (!$("#products-list").length) return; // Not on products page
+        if (window.location.pathname !== "/products.html") return; // Not on products page
 
         let globalProducts = [];
 
