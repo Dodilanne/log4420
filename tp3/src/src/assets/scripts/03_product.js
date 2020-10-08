@@ -1,36 +1,36 @@
-/* global $, window */
+/* global $, window, cart */
 
 (() => {
-    const getTemplate = ({ name }) => `<article>
+    const getTemplate = ({
+        name,
+        image,
+        description,
+        features,
+        price,
+    }) => `<article>
         <h1>${name}</h1>
         <div class="row">
         <div class="col">
-            <img id="product-image" alt="${name}" src="img/xbox-controller.png">
+            <img id="product-image" alt="${name}" src="img/${image}">
         </div>
         <div class="col">
             <section>
             <h2>Description</h2>
-            <p>Manette pouvant être branchée à une console Xbox 360 et un PC. Cette manette vous permettra de jouer à
-                vos jeux vidéo préférés.
-                De plus, cette manette est sans fil et comporte un port pour casque d'écoute.</p>
+            <p>${description}</p>
             </section>
             <section>
             <h2>Caractéristiques</h2>
-            <ul>
-                <li>Manette sans fil 2.4GHz avec adapteur USB</li>
-                <li>Compacte et ergonomique</li>
-                <li>Port pour casque d'écoute pour Xbox Live</li>
-            </ul>
+            <ul>${features.map((feature) => `<li>${feature}</li>`)}</ul>
             </section>
             <hr>
-            <form class="pull-right">
+            <form id="add-to-cart-form" class="pull-right">
             <label for="product-quantity">Quantité:</label>
             <input class="form-control" id="product-quantity" type="number" value="1" min="1">
             <button class="btn" title="Ajouter au panier" type="submit">
                 <i class="fa fa-cart-plus"></i>&nbsp; Ajouter
             </button>
             </form>
-            <p>Prix: <strong>29,99&thinsp;$</strong></p>
+            <p>Prix: <strong>${price}&thinsp;$</strong></p>
         </div>
         </div>
     </article>`;
@@ -50,12 +50,23 @@
         let globalProduct = undefined;
         const id = getURLParam("id");
 
+        const addListeners = () => {
+            $("#add-to-cart-form").on("submit", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const qty = Number($("#product-quantity").val()) || 1;
+                cart.addItem(globalProduct, qty);
+            });
+        };
+
         const updateProduct = () => {
             $("main").html(
                 globalProduct && globalProduct.id
                     ? getTemplate(globalProduct)
                     : notFoundTemplate
             );
+            addListeners();
         };
 
         if (id) {
