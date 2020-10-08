@@ -14,10 +14,14 @@ const cart = {
         $(".shopping-cart > .count").html(nbOfItems.toString());
     },
 
-    addItem: (item) => {
+    addItem: (item, qty = 1) => {
+        const { id } = item;
         cart.content = {
             ...cart.content,
-            [item.id]: item,
+            [id]: {
+                id,
+                qty: cart.content[id] ? cart.content[id].qty + qty : qty,
+            },
         };
         localStorage.setItem("cart", JSON.stringify(cart.content));
         cart.updateCart();
