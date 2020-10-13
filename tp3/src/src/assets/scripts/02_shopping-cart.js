@@ -10,7 +10,7 @@
       <th>Quantité</th>
       <th>Prix</th>
     </tr>`;
-    const getProductRow = (id, name, price, qty) => `<tr data-product="${id}">
+    const getProductRow = ({id, name, price, qty}) => `<tr data-product="${id}">
   <td><button title="Supprimer" data-id="${id}"><i class="fa fa-times"></i></button></td>
   <td><a href="./product.html">${name}</a></td>
   <td>${price}&thinsp;$</td>
@@ -25,7 +25,7 @@
       </div>
     </div>
   </td>
-  <td>199,99&thinsp;$</td>
+  <td>${qty*price}&thinsp;$</td>
 </tr>`;
     const getBuyRow = (
         total
@@ -40,26 +40,39 @@
             })
             .remove();
     };
-
+    const getTotal= (data)=>{ let total = 0.00;
+        $.each(data, (index, element)=>{
+            total+= element.price * element.qty;
+        });
+        return total.toFixed(2);
+    };
     $(() => {
         if (window.location.pathname !== "/shopping-cart.html") return; // Not on products page
         if (cart.isEmpty()) {
             $(".shopping-cart-table").html(emptyMessage);
             return;
         }
-        $("thead").html(shoppingCartHead);
-        $("tbody").html(getProductRow("1", "test", "199.99", "4"));
-        $(".shopping-cart-table").after(getBuyRow("199.99"));
-        $(".shopping-cart-table button[title|='Supprimer']").on(
-            "click",
-            function () {
-                const id = $(this).data("id");
-                removeProduct(id);
-            }
-        );
-        $("#emptyCart").on("click", function () {
-            cart.clearCart();
-            $(".shopping-cart-table tr").remove();
+        $.getJSON("data/products.json", (res) => {
+            const data = [];
+            $.each(cart.content, function(index, element) {
+                const cartItem =res.find((product)=>product.id == element.id);
+                cartItem.qty = element.qty;
+                data.push(cartItem);
+            });
+            $("thead").html(shoppingCartHead);
+            $("tbody").html(data.map(getProductRow).join("\n"));
+            $(".shopping-cart-table").after(getBuyRow(getTotal(data)));
+            $(".shopping-cart-table button[title|='Supprimer']").on(
+                "click",
+                function () {
+                    const id = $(this).data("id");
+                    removeProduct(id);
+                }
+            );
+            $("#emptyCart").on("click", function () {
+                cart.clearCart();
+                $(".shopping-cart-table tr").remove();
+            });
         });
     });
 })();
