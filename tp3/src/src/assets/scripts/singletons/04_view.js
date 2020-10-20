@@ -1,6 +1,8 @@
 /* global $, Cart, Products, Templates, Utils */
 
 const View = (() => {
+    let dialogTimeout;
+
     const header = {
         updateCount: () => {
             const selector = ".shopping-cart > .count";
@@ -35,6 +37,16 @@ const View = (() => {
         },
     };
 
+    const product = {
+        showDialog: () => {
+            $("#dialog").css("visibility", "visible");
+            clearTimeout(dialogTimeout);
+            dialogTimeout = setTimeout(() => {
+                $("#dialog").css("visibility", "hidden");
+            }, 5000);
+        },
+    };
+
     const shoppingCart = {
         updateList: () => {
             const data = [];
@@ -59,12 +71,14 @@ const View = (() => {
                 item.qty < 2
             );
             $(`${selector} .incrementor .qty`).html(item.qty);
-            $(`${selector} .partial-total`).html(
+            $(`${selector} .total-amount`).html(
                 `${Utils.formatPrice(item.qty * price)}`
             );
         },
         updateTotal: () => {
-            $(".shopping-cart-total strong").html(`${Utils.formatPrice(Cart.total())}`);
+            $(".shopping-cart-total strong").html(
+                `${Utils.formatPrice(Cart.total())}`
+            );
         },
         removeItem: (id) => {
             $(`.shopping-cart-table tr[data-product="${id}"]`).remove();
@@ -79,5 +93,5 @@ const View = (() => {
         },
     };
 
-    return { products, header, shoppingCart };
+    return { products, product, header, shoppingCart };
 })();

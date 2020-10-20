@@ -49,7 +49,7 @@
 
         $("main").on("click", "#emptyCart", function () {
             const shouldProceed = confirm(
-                "Voulez-vous supprimer tous les produits du panier?"
+                "Voulez-vous supprimer tous les produits du panier ?"
             );
             if (!shouldProceed) return;
             Cart.clear();

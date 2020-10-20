@@ -22,6 +22,7 @@
                 const qty = Number($("#product-quantity").val()) || 1;
                 Cart.addItem(product.id, qty);
                 View.header.updateCount();
+                View.product.showDialog();
             });
         } else {
             $("main").html(Templates.product.notFound());
