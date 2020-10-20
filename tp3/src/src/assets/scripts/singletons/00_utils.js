@@ -8,7 +8,9 @@ const Utils = (() => {
     const compare = (a, b) =>
         typeof a === "string" ? a.localeCompare(b) : a - b;
 
-    const plural = (data) => data.length > 1 ? "s" : "";
+    const plural = (data) => (data.length > 1 ? "s" : "");
 
-    return { isOnPage, compare, plural };
+    const formatPrice = (price) => `${parseFloat(price).toFixed(2).replace(".", ",")}$`;
+
+    return { isOnPage, compare, plural, formatPrice };
 })();

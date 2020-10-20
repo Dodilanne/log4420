@@ -60,11 +60,11 @@ const View = (() => {
             );
             $(`${selector} .incrementor .qty`).html(item.qty);
             $(`${selector} .partial-total`).html(
-                `${(item.qty * price).toFixed(2)} $`
+                `${Utils.formatPrice(item.qty * price)}`
             );
         },
         updateTotal: () => {
-            $(".shopping-cart-total strong").html(`${Cart.total()} $`);
+            $(".shopping-cart-total strong").html(`${Utils.formatPrice(Cart.total())}`);
         },
         removeItem: (id) => {
             $(`.shopping-cart-table tr[data-product="${id}"]`).remove();

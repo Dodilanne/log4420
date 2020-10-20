@@ -1,10 +1,12 @@
+/* global Utils */
+
 const Templates = (() => {
     const products = {
         product: ({ id, name, image, price }) => `<div class="product">
           <a href="./product.html?id=${id}" title="En savoir plus...">
             <h2>${name}</h2>
             <img alt="${name}" src="img/${image}">
-            <p class="price"><small>Prix</small> ${price}&thinsp;$</p>
+            <p class="price"><small>Prix</small> ${Utils.formatPrice(price)}</p>
           </a>
         </div>`,
     };
@@ -33,7 +35,7 @@ const Templates = (() => {
                     <i class="fa fa-cart-plus"></i>&nbsp; Ajouter
                 </button>
                 </form>
-                <p>Prix: <strong>${price}&thinsp;$</strong></p>
+                <p>Prix: <strong>${Utils.formatPrice(price)}</strong></p>
             </div>
             </div>
         </article>`,
@@ -48,11 +50,11 @@ const Templates = (() => {
           <th>Quantité</th>
           <th>Prix</th>
         </tr>`,
-        empty: () => "<p>Aucun produits dans le panier</p>",
+        empty: () => "<p>Aucun produit dans le panier.</p>",
         productRow: ({ id, name, price, qty }) => `<tr data-product="${id}">
           <td><button title="Supprimer" data-id="${id}"><i class="fa fa-times"></i></button></td>
           <td><a href="./product.html">${name}</a></td>
-          <td>${price}&thinsp;$</td>
+          <td>${Utils.formatPrice(price)}</td>
           <td>
             <div data-id="${id}" class="row incrementor">
               <div class="col">
@@ -64,10 +66,10 @@ const Templates = (() => {
               </div>
             </div>
           </td>
-          <td class="partial-total">${(qty * price).toFixed(2)}&thinsp;$</td>
+          <td class="partial-total">${Utils.formatPrice(qty * price)}</td>
         </tr>`,
         buyRow: (total) => `<p class="shopping-cart-total">
-            Total: <strong>${total}&thinsp;$</strong>
+            Total: <strong>${Utils.formatPrice(total)}</strong>
         </p>
         <a class="btn pull-right" href="./order.html">Commander <i class="fa fa-angle-double-right"></i></a>
         <button class="btn" id="emptyCart"><i class="fa fa-trash-o"></i>&nbsp; Vider le panier</button>`,
