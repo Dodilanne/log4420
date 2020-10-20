@@ -1,4 +1,4 @@
-/* global $, Utils, Cart, View, Products */
+/* global $, Utils, Cart, View, Products, confirm */
 
 (() => {
     $(() => {
@@ -15,9 +15,14 @@
             "click",
             ".shopping-cart-table button[title|='Supprimer']",
             function () {
+                const shouldProceed = confirm(
+                    "Voulez-vous supprimer le produit du panier?"
+                );
+                if (!shouldProceed) return;
                 const id = $(this).data("id");
                 Cart.removeItem(id);
                 view.removeItem(id);
+                view.updateTotal();
                 View.header.updateCount();
             }
         );
@@ -30,19 +35,23 @@
                     .parents(".incrementor")
                     .first()
                     .data("id");
-                if (productID) {
-                    const shouldRemove = Cart[action](productID, 1);
-                    if (shouldRemove) {
-                        view.removeItem(productID);
-                    } else {
-                        view.updateQty(productID);
-                    }
-                    View.header.updateCount();
-                }
+                const product = Cart.get()[productID];
+                const removingLastItem =
+                    action === "removeItem" && product && product.qty < 2;
+                if (removingLastItem) return;
+
+                Cart[action](productID, 1);
+                view.updateItem(productID);
+                view.updateTotal();
+                View.header.updateCount();
             });
         });
 
         $("main").on("click", "#emptyCart", function () {
+            const shouldProceed = confirm(
+                "Voulez-vous supprimer tous les produits du panier?"
+            );
+            if (!shouldProceed) return;
             Cart.clear();
             view.clear();
             View.header.updateCount();

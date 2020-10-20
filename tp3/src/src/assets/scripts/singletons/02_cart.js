@@ -52,20 +52,18 @@ const Cart = (() => {
             },
         };
         backupToStorage();
-        return false;
     };
 
     const removeItem = (id, qty = undefined) => {
         get();
-        if (!cart[id]) return false;
+        if (!cart[id]) return;
         const currQty = cart[id].qty;
         if (!qty || qty >= currQty) {
             delete cart[id];
             backupToStorage();
-            return true;
+        } else {
+            cart[id].qty -= qty;
         }
-        cart[id].qty -= qty;
-        return false;
     };
 
     const clear = () => {

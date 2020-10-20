@@ -23,7 +23,7 @@ const Templates = (() => {
                 </section>
                 <section>
                 <h2>Caractéristiques</h2>
-                <ul>${features.map((feature) => `<li>${feature}</li>`)}</ul>
+                <ul>${features.map((feature) => `<li>${feature}</li>`).join("")}</ul>
                 </section>
                 <hr>
                 <form id="add-to-cart-form" class="pull-right">
@@ -56,7 +56,7 @@ const Templates = (() => {
           <td>
             <div data-id="${id}" class="row incrementor">
               <div class="col">
-                <button title="Retirer" action="removeItem"><i class="fa fa-minus"></i></button>
+                <button title="Retirer" action="removeItem" ${qty < 2 ? "disabled" : ""}><i class="fa fa-minus"></i></button>
               </div>
               <div class="col qty">${qty}</div>
               <div class="col">
@@ -64,7 +64,7 @@ const Templates = (() => {
               </div>
             </div>
           </td>
-          <td>${(qty * price).toFixed(2)}&thinsp;$</td>
+          <td class="partial-total">${(qty * price).toFixed(2)}&thinsp;$</td>
         </tr>`,
         buyRow: (total) => `<p class="shopping-cart-total">
             Total: <strong>${total}&thinsp;$</strong>

@@ -50,10 +50,21 @@ const View = (() => {
             $("tbody").html(data.map(productRow).join("\n"));
             $(".shopping-cart-table").after(buyRow(Cart.total()));
         },
-        updateQty: (id) => {
-            $(
-                `.shopping-cart-table tr[data-product="${id}"] .incrementor .qty`
-            ).html(Cart.get()[id].qty);
+        updateItem: (id) => {
+            const item = Cart.get()[id];
+            const { price } = Products.getOne(id);
+            const selector = `.shopping-cart-table tr[data-product="${id}"]`;
+            $(`${selector} .incrementor [action="removeItem"]`).prop(
+                "disabled",
+                item.qty < 2
+            );
+            $(`${selector} .incrementor .qty`).html(item.qty);
+            $(`${selector} .partial-total`).html(
+                `${(item.qty * price).toFixed(2)} $`
+            );
+        },
+        updateTotal: () => {
+            $(".shopping-cart-total strong").html(`${Cart.total()} $`);
         },
         removeItem: (id) => {
             $(`.shopping-cart-table tr[data-product="${id}"]`).remove();
