@@ -10,7 +10,7 @@ const Utils = (() => {
 
     const plural = (data) => (data.length > 1 ? "s" : "");
 
-    const formatPrice = (price) => `${parseFloat(price).toFixed(2).replace(".", ",")}$`;
+    const formatPrice = (price) => `${parseFloat(price).toFixed(2).replace(".", ",")}&thinsp;$`;
 
     return { isOnPage, compare, plural, formatPrice };
 })();
