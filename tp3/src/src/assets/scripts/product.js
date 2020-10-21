@@ -1,17 +1,10 @@
 /* global $, window, Cart, View, Products, Templates, Utils */
 
 (() => {
-    const getURLParam = (name) => {
-        const results = new RegExp(`[?&]${name}=([^&#]*)`).exec(
-            window.location.href
-        );
-        return results ? results[1] : undefined;
-    };
-
     $(() => {
         if (!Utils.isOnPage("product")) return;
 
-        const id = getURLParam("id");
+        const id = Utils.getURLParam("id");
 
         if (id) {
             Products.getOne(id, (product) => {

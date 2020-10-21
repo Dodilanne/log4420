@@ -9,6 +9,13 @@ const Utils = (() => {
         return window.location.replace(`/${pageName}.html`);
     };
 
+    const getURLParam = (name) => {
+        const results = new RegExp(`[?&]${name}=([^&#]*)`).exec(
+            window.location.href
+        );
+        return results ? results[1] : undefined;
+    };
+
     const compare = (a, b) =>
         typeof a === "string" ? a.localeCompare(b) : a - b;
 
@@ -17,5 +24,5 @@ const Utils = (() => {
     const formatPrice = (price) =>
         `${parseFloat(price).toFixed(2).replace(".", ",")}&thinsp;$`;
 
-    return { isOnPage, redirect, compare, plural, formatPrice };
+    return { isOnPage, redirect, getURLParam, compare, plural, formatPrice };
 })();
