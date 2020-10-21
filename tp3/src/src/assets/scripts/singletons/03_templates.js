@@ -54,7 +54,7 @@ const Templates = (() => {
         productRow: ({ id, name, price, qty }) => `<tr data-product="${id}">
           <td><button title="Supprimer" class="remove-item-button" data-id="${id}"><i class="fa fa-times"></i></button></td>
           <td><a href="./product.html">${name}</a></td>
-          <td class="price">${Utils.formatPrice(price)}</td>
+          <td class="unit-price">${Utils.formatPrice(price)}</td>
           <td>
             <div data-id="${id}" class="row incrementor">
               <div class="col">
@@ -66,9 +66,9 @@ const Templates = (() => {
               </div>
             </div>
           </td>
-          <td class="total-amount">${Utils.formatPrice(qty * price)}</td>
+          <td class="price">${Utils.formatPrice(qty * price)}</td>
         </tr>`,
-        buyRow: (total) => `<p class="shopping-cart-total">
+        buyRow: (total) => `<p id="total-amount" class="shopping-cart-total">
             Total: <strong>${Utils.formatPrice(total)}</strong>
         </p>
         <a class="btn pull-right" href="./order.html">Commander <i class="fa fa-angle-double-right"></i></a>

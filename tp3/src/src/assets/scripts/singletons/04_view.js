@@ -75,7 +75,7 @@ const View = (() => {
                     item.qty < 2
                 );
                 $(`${selector} .incrementor .qty`).html(item.qty);
-                $(`${selector} .total-amount`).html(
+                $(`${selector} .price`).html(
                     `${Utils.formatPrice(item.qty * price)}`
                 );
             });
