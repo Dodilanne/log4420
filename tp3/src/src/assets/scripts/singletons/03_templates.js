@@ -53,7 +53,7 @@ const Templates = (() => {
         empty: () => "<p>Aucun produit dans le panier.</p>",
         productRow: ({ id, name, price, qty }) => `<tr data-product="${id}">
           <td><button title="Supprimer" class="remove-item-button" data-id="${id}"><i class="fa fa-times"></i></button></td>
-          <td><a href="./product.html">${name}</a></td>
+          <td><a href="./product.html?id=${id}">${name}</a></td>
           <td class="unit-price">${Utils.formatPrice(price)}</td>
           <td>
             <div data-id="${id}" class="row incrementor">
