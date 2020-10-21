@@ -29,6 +29,8 @@
                     $("main").html(Templates.product.notFound());
                 }
             });
+        } else {
+            Utils.redirect("products");
         }
     });
 })();
