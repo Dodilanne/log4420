@@ -23,16 +23,18 @@ const View = (() => {
             const sortingOrder = $("#product-criteria button.selected").data(
                 "sorting-order"
             );
-            const products = Products.getFiltered(
+            Products.getFiltered(
                 category,
                 sortingKey,
-                sortingOrder
-            );
-            $("#products-list").html(
-                products.map(Templates.products.product).join("\n")
-            );
-            $("#products-count").html(
-                `${products.length} produit${Utils.plural(products)}`
+                sortingOrder,
+                (products) => {
+                    $("#products-list").html(
+                        products.map(Templates.products.product).join("\n")
+                    );
+                    $("#products-count").html(
+                        `${products.length} produit${Utils.plural(products)}`
+                    );
+                }
             );
         },
     };
@@ -49,31 +51,34 @@ const View = (() => {
 
     const shoppingCart = {
         updateList: () => {
-            const data = [];
-            const { head, productRow, buyRow } = Templates.shoppingCart;
-            $.each(Cart.get(), function (_index, element) {
-                const cartItem = Products.get().find(
-                    (product) => product.id == element.id
-                );
-                cartItem.qty = element.qty;
-                data.push(cartItem);
+            Products.get((products) => {
+                const data = [];
+                const { head, productRow, buyRow } = Templates.shoppingCart;
+                $.each(Cart.get(), function (_index, element) {
+                    const cartItem = products.find(
+                        (product) => product.id == element.id
+                    );
+                    cartItem.qty = element.qty;
+                    data.push(cartItem);
+                });
+                $("thead").html(head);
+                $("tbody").html(data.map(productRow).join("\n"));
+                $(".shopping-cart-table").after(buyRow(Cart.total()));
             });
-            $("thead").html(head);
-            $("tbody").html(data.map(productRow).join("\n"));
-            $(".shopping-cart-table").after(buyRow(Cart.total()));
         },
         updateItem: (id) => {
             const item = Cart.get()[id];
-            const { price } = Products.getOne(id);
-            const selector = `.shopping-cart-table tr[data-product="${id}"]`;
-            $(`${selector} .incrementor [action="removeItem"]`).prop(
-                "disabled",
-                item.qty < 2
-            );
-            $(`${selector} .incrementor .qty`).html(item.qty);
-            $(`${selector} .total-amount`).html(
-                `${Utils.formatPrice(item.qty * price)}`
-            );
+            Products.getOne(id, ({ price }) => {
+                const selector = `.shopping-cart-table tr[data-product="${id}"]`;
+                $(`${selector} .incrementor [action="removeItem"]`).prop(
+                    "disabled",
+                    item.qty < 2
+                );
+                $(`${selector} .incrementor .qty`).html(item.qty);
+                $(`${selector} .total-amount`).html(
+                    `${Utils.formatPrice(item.qty * price)}`
+                );
+            });
         },
         updateTotal: () => {
             $(".shopping-cart-total strong").html(

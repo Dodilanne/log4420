@@ -36,34 +36,32 @@ const Cart = (() => {
 
     const total = () =>
         Object.values(get())
-            .reduce((prevTotal, { qty, id }) => {
-                const { price } = Products.getOne(id);
-                return qty * price + prevTotal;
-            }, 0)
+            .reduce((prevTotal, { qty, price }) => qty * price + prevTotal, 0)
             .toFixed(2);
 
-    const addItem = (id, qty = 1) => {
+    const addItem = (id, price, qty = 1) => {
         get();
         cart = {
             ...cart,
             [id]: {
                 id,
+                price,
                 qty: cart[id] ? cart[id].qty + qty : qty,
             },
         };
         backupToStorage();
     };
 
-    const removeItem = (id, qty = undefined) => {
+    const removeItem = (id, _price, qty = undefined) => {
         get();
         if (!cart[id]) return;
         const currQty = cart[id].qty;
         if (!qty || qty >= currQty) {
             delete cart[id];
-            backupToStorage();
         } else {
             cart[id].qty -= qty;
         }
+        backupToStorage();
     };
 
     const clear = () => {

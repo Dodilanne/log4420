@@ -39,11 +39,12 @@
                 const removingLastItem =
                     action === "removeItem" && product && product.qty < 2;
                 if (removingLastItem) return;
-
-                Cart[action](productID, 1);
-                view.updateItem(productID);
-                view.updateTotal();
-                View.header.updateCount();
+                Products.getOne(productID, ({ price }) => {
+                    Cart[action](productID, price, 1);
+                    view.updateItem(productID);
+                    view.updateTotal();
+                    View.header.updateCount();
+                });
             });
         });
 

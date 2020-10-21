@@ -12,20 +12,23 @@
         if (!Utils.isOnPage("product")) return;
 
         const id = getURLParam("id");
-        const product = id ? Products.getOne(id) : undefined;
 
-        if (product && product.id) {
-            $("main").html(Templates.product.product(product));
-            $("main").on("submit", "#add-to-cart-form", (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const qty = Number($("#product-quantity").val()) || 1;
-                Cart.addItem(product.id, qty);
-                View.header.updateCount();
-                View.product.showDialog();
+        if (id) {
+            Products.getOne(id, (product) => {
+                if (product && product.id) {
+                    $("main").html(Templates.product.product(product));
+                    $("main").on("submit", "#add-to-cart-form", (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const qty = Number($("#product-quantity").val()) || 1;
+                        Cart.addItem(product.id, product.price, qty);
+                        View.header.updateCount();
+                        View.product.showDialog();
+                    });
+                } else {
+                    $("main").html(Templates.product.notFound());
+                }
             });
-        } else {
-            $("main").html(Templates.product.notFound());
         }
     });
 })();
