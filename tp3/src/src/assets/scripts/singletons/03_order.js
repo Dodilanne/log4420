@@ -1,5 +1,13 @@
 /* global localStorage, Products */
 
+/*
+interface Order {
+    orderID: number;
+    firstName: string;
+    lastName: string;
+}
+*/
+
 const Order = (() => {
     let order;
 
@@ -28,8 +36,12 @@ const Order = (() => {
         return order;
     };
 
-    const set = (newOrder) => {
-        order = newOrder;
+    const set = ({ firstName, lastName }) => {
+        order = {
+            orderID: order.orderID + 1,
+            firstName,
+            lastName,
+        };
         backupToStorage();
     };
 
