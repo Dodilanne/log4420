@@ -4,6 +4,7 @@ const Products = (() => {
     let products = undefined;
 
     const fetch = (cb) => {
+        console.log("fetch!");
         $.getJSON("data/products.json", (res) => {
             products = res;
             cb(products);

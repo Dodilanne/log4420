@@ -2,7 +2,11 @@
 
 const Utils = (() => {
     const isOnPage = (pageName) => {
-        return window.location.pathname === `/${pageName}.html`;
+        const { pathname } = window.location;
+        return (
+            (pathname === "/" && pageName === "index") ||
+            pathname === `/${pageName}.html`
+        );
     };
 
     const redirect = (pageName) => {

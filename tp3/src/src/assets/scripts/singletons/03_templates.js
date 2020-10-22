@@ -1,6 +1,44 @@
 /* global Utils */
 
 const Templates = (() => {
+    const mainNav = [
+        { title: "Accueil", pathname: "index" },
+        { title: "Produits", pathname: "products" },
+        { title: "Contact", pathname: "contact" },
+    ];
+
+    const common = {
+        header: () => `<div class="header-container">
+          <div class="logo">
+            <a href="./index.html">
+              <img alt="logo" src="img/logo.svg" title="Accueil">
+            </a>
+          </div>
+          <nav>
+            <ul>
+              ${mainNav.map(({ title, pathname }) => {
+        const isActive =
+                      Utils.isOnPage(pathname) ||
+                      (pathname === "products" && Utils.isOnPage("product"));
+        return `<li ${
+            isActive ? 'class="active"' : ""
+        }><a href="./${pathname}.html">${title}</a></li>`;
+    })}
+              <li>
+                <a class="shopping-cart" href="./shopping-cart.html" title="Panier">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                    <i class="fa fa-shopping-cart fa-stack-1x"></i>
+                  </span>
+                  <span class="count">3</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>`,
+        footer: () => "<p>Par Pablo Chaussé-Cossio et Vincent Audet</p>",
+    };
+
     const products = {
         product: ({ id, name, image, price }) => `<div class="product">
           <a href="./product.html?id=${id}" title="En savoir plus...">
@@ -25,7 +63,9 @@ const Templates = (() => {
                 </section>
                 <section>
                 <h2>Caractéristiques</h2>
-                <ul id="product-features">${features.map((feature) => `<li>${feature}</li>`).join("")}</ul>
+                <ul id="product-features">${features
+        .map((feature) => `<li>${feature}</li>`)
+        .join("")}</ul>
                 </section>
                 <hr>
                 <form id="add-to-cart-form" class="pull-right">
@@ -35,7 +75,9 @@ const Templates = (() => {
                     <i class="fa fa-cart-plus"></i>&nbsp; Ajouter
                 </button>
                 </form>
-                <p id="product-price">Prix: <strong>${Utils.formatPrice(price)}</strong></p>
+                <p id="product-price">Prix: <strong>${Utils.formatPrice(
+        price
+    )}</strong></p>
             </div>
             </div>
         </article>`,
@@ -58,7 +100,9 @@ const Templates = (() => {
           <td>
             <div data-id="${id}" class="row incrementor">
               <div class="col">
-                <button title="Retirer" action="removeItem" ${qty < 2 ? "disabled" : ""} class="remove-quantity-button"><i class="fa fa-minus"></i></button>
+                <button title="Retirer" action="removeItem" ${
+    qty < 2 ? "disabled" : ""
+    } class="remove-quantity-button"><i class="fa fa-minus"></i></button>
               </div>
               <div class="col qty quantity">${qty}</div>
               <div class="col">
@@ -76,6 +120,7 @@ const Templates = (() => {
     };
 
     return {
+        common,
         products,
         product,
         shoppingCart,

@@ -4,11 +4,20 @@ const View = (() => {
     let dialogTimeout;
 
     const header = {
+        update: () => {
+            $("header").html(Templates.common.header());
+        },
         updateCount: () => {
             const selector = ".shopping-cart > .count";
             const count = Cart.count();
             $(selector).css("visibility", count < 1 ? "hidden" : "visible");
             $(selector).html(count.toString());
+        },
+    };
+
+    const footer = {
+        update: () => {
+            $("footer").html(Templates.common.footer());
         },
     };
 
@@ -98,5 +107,5 @@ const View = (() => {
         },
     };
 
-    return { products, product, header, shoppingCart };
+    return { products, product, header, footer, shoppingCart };
 })();
