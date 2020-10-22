@@ -126,7 +126,7 @@ const Templates = (() => {
         message: ({ firstName, lastName, orderID }) => `<article>
             <h1>Votre commande est confirmée ${firstName} ${lastName}!</h1>
             <p>
-                Votre numéro de confirmation est le <strong>${orderID}</strong>.
+                Votre numéro de confirmation est le <strong>${orderID <= 99999 ? (`0000${orderID}`).slice(-5): orderID}</strong>.
             </p>
         </article>`,
     };
