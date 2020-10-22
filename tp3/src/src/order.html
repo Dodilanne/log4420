@@ -16,20 +16,20 @@
   <main>
     <article>
       <h1>Commande</h1>
-      <form action="./confirmation.html" method="post">
+      <form action="./confirmation.html" method="post" id="orderForm">
         <section>
           <h2>Contact</h2>
           <div class="row">
             <div class="col">
               <div class="form-group">
                 <label for="first-name">Prénom</label>
-                <input class="form-control" type="text" id="first-name" name="first-name" placeholder="Prénom" required>
+                <input class="form-control" type="text" id="first-name" name="first-name" minlenght="2" placeholder="Prénom" required>
               </div>
             </div>
             <div class="col">
               <div class="form-group">
                 <label for="last-name">Nom</label>
-                <input class="form-control" type="text" id="last-name" name="last-name" placeholder="Nom" required>
+                <input class="form-control" type="text" id="last-name" name="last-name" minlenght="2" placeholder="Nom" required>
               </div>
             </div>
           </div>
