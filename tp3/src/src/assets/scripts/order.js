@@ -1,4 +1,4 @@
-/* global $ Order Utils*/
+/* global $ Order Utils Cart*/
 (() => {
     $(() => {
         jQuery.validator.addMethod(
@@ -32,6 +32,7 @@
             const firstName = $("#first-name").val();
             const lastName = $("#last-name").val();
             Order.set({ firstName, lastName });
+            Cart.clear();
             Utils.redirect("confirmation", false);
         });
     });
