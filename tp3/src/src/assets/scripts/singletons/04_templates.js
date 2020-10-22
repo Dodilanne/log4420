@@ -16,14 +16,17 @@ const Templates = (() => {
           </div>
           <nav>
             <ul>
-              ${mainNav.map(({ title, pathname }) => {
-        const isActive =
-                      Utils.isOnPage(pathname) ||
-                      (pathname === "products" && Utils.isOnPage("product"));
-        return `<li ${
-            isActive ? 'class="active"' : ""
-        }><a href="./${pathname}.html">${title}</a></li>`;
-    })}
+              ${mainNav
+        .map(({ title, pathname }) => {
+            const isActive =
+                Utils.isOnPage(pathname) ||
+                (pathname === "products" &&
+                    Utils.isOnPage("product"));
+            return `<li ${
+                isActive ? 'class="active"' : ""
+            }><a href="./${pathname}.html">${title}</a></li>`;
+        })
+        .join("")}
               <li>
                 <a class="shopping-cart" href="./shopping-cart.html" title="Panier">
                   <span class="fa-stack fa-lg">
@@ -64,8 +67,8 @@ const Templates = (() => {
                 <section>
                 <h2>Caractéristiques</h2>
                 <ul id="product-features">${features
-        .map((feature) => `<li>${feature}</li>`)
-        .join("")}</ul>
+                    .map((feature) => `<li>${feature}</li>`)
+                    .join("")}</ul>
                 </section>
                 <hr>
                 <form id="add-to-cart-form" class="pull-right">
@@ -76,8 +79,8 @@ const Templates = (() => {
                 </button>
                 </form>
                 <p id="product-price">Prix: <strong>${Utils.formatPrice(
-        price
-    )}</strong></p>
+                    price
+                )}</strong></p>
             </div>
             </div>
         </article>`,
@@ -101,8 +104,8 @@ const Templates = (() => {
             <div data-id="${id}" class="row incrementor">
               <div class="col">
                 <button title="Retirer" action="removeItem" ${
-    qty < 2 ? "disabled" : ""
-    } class="remove-quantity-button"><i class="fa fa-minus"></i></button>
+                    qty < 2 ? "disabled" : ""
+                } class="remove-quantity-button"><i class="fa fa-minus"></i></button>
               </div>
               <div class="col qty quantity">${qty}</div>
               <div class="col">
