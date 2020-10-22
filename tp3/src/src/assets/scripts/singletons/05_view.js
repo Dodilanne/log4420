@@ -107,5 +107,18 @@ const View = (() => {
         },
     };
 
-    return { products, product, header, footer, shoppingCart };
+    const confirmation = {
+        updateMessage: (order) => {
+            $("main").html(Templates.confirmation.message(order));
+        },
+    };
+
+    return {
+        products,
+        product,
+        header,
+        footer,
+        shoppingCart,
+        confirmation,
+    };
 })();

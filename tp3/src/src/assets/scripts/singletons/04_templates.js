@@ -122,10 +122,20 @@ const Templates = (() => {
         <button class="btn remove-all-items-button" id="emptyCart"><i class="fa fa-trash-o"></i>&nbsp; Vider le panier</button>`,
     };
 
+    const confirmation = {
+        message: ({ firstName, lastName, orderID }) => `<article>
+            <h1>Votre commande est confirmée ${firstName} ${lastName}!</h1>
+            <p>
+                Votre numéro de confirmation est le <strong>${orderID}</strong>.
+            </p>
+        </article>`,
+    };
+
     return {
         common,
         products,
         product,
         shoppingCart,
+        confirmation,
     };
 })();
