@@ -17,16 +17,16 @@ const Templates = (() => {
           <nav>
             <ul>
               ${mainNav
-        .map(({ title, pathname }) => {
-            const isActive =
-                Utils.isOnPage(pathname) ||
-                (pathname === "products" &&
-                    Utils.isOnPage("product"));
-            return `<li ${
-                isActive ? 'class="active"' : ""
-            }><a href="./${pathname}.html">${title}</a></li>`;
-        })
-        .join("")}
+                  .map(({ title, pathname }) => {
+                      const isActive =
+                          Utils.isOnPage(pathname) ||
+                          (pathname === "products" &&
+                              Utils.isOnPage("product"));
+                      return `<li ${
+                          isActive ? 'class="active"' : ""
+                      }><a href="./${pathname}.html">${title}</a></li>`;
+                  })
+                  .join("")}
               <li>
                 <a class="shopping-cart" href="./shopping-cart.html" title="Panier">
                   <span class="fa-stack fa-lg">

@@ -20,7 +20,7 @@ module.exports = {
         ecmaVersion: 2018,
     },
     rules: {
-        indent: ["error", 4],
+        //indent: ["error", 4],
         //"linebreak-style": false,
         quotes: ["error", "double", "avoid-escape"],
         semi: ["error", "always"],
