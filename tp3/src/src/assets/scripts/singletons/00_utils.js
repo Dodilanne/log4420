@@ -9,8 +9,9 @@ const Utils = (() => {
         );
     };
 
-    const redirect = (pageName) => {
-        return window.location.replace(`/${pageName}.html`);
+    const redirect = (pageName, replace = true) => {
+        if (replace) window.location.replace(`/${pageName}.html`);
+        else window.location.pathname = `/${pageName}.html`;
     };
 
     const getURLParam = (name) => {

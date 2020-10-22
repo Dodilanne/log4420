@@ -1,4 +1,4 @@
-/* global $ */
+/* global $ Order Utils*/
 (() => {
     $(() => {
         jQuery.validator.addMethod(
@@ -26,6 +26,13 @@
                     creditcardexpiry: true,
                 },
             },
+        });
+        $("#orderForm").on("submit", (e) => {
+            e.preventDefault();
+            const firstName = $("#first-name").val();
+            const lastName = $("#last-name").val();
+            Order.set({ firstName, lastName });
+            Utils.redirect("confirmation", false);
         });
     });
 })();
