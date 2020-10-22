@@ -9,7 +9,9 @@ interface Order {
 */
 
 const Order = (() => {
-    let order;
+    const defaultState = { orderID: 0 };
+
+    let order = defaultState;
 
     const backupToStorage = () => {
         if (!order) return;
@@ -18,25 +20,26 @@ const Order = (() => {
     };
 
     const reset = () => {
-        order = undefined;
+        order = defaultState;
         backupToStorage();
         return order;
     };
 
     const getFromStorage = () => {
-        const stringifiedInstance = localStorage.getItem("cart");
+        const stringifiedInstance = localStorage.getItem("order");
         return JSON.parse(stringifiedInstance);
     };
 
     const get = () => {
-        if (!order) {
-            order = getFromStorage();
+        if (order.orderID < 1) {
+            order = getFromStorage() || defaultState;
         }
 
         return order;
     };
 
     const set = ({ firstName, lastName }) => {
+        get();
         order = {
             orderID: order.orderID + 1,
             firstName,
