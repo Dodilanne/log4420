@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>OnlineShop - Produits</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            ,→
+            href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="js/vendors.min.js"></script>
+        <script type="text/javascript" src="js/singletons.min.js"></script>
+        <script type="text/javascript" src="js/scripts.min.js"></script>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <section class="sidebar" aria-label="Filtres">
+                <section>
+                    <h2>Catégories</h2>
+                    <div class="btn-group vertical" id="product-categories">
+                        <button data-category="cameras">Appareils photo</button>
+                        <button data-category="consoles">Consoles</button>
+                        <button data-category="screens">Écrans</button>
+                        <button data-category="computers">Ordinateurs</button>
+                        <button data-category="all" class="selected">
+                            Tous les produits
+                        </button>
+                    </div>
+                </section>
+                <section>
+                    <h2>Classement</h2>
+                    <div class="btn-group vertical" id="product-criteria">
+                        <button
+                            data-sorting-order="asc"
+                            data-sorting-key="price"
+                            class="selected"
+                        >
+                            Prix (bas-haut)
+                        </button>
+                        <button
+                            data-sorting-order="desc"
+                            data-sorting-key="price"
+                        >
+                            Prix (haut-bas)
+                        </button>
+                        <button
+                            data-sorting-order="asc"
+                            data-sorting-key="name"
+                        >
+                            Nom (A-Z)
+                        </button>
+                        <button
+                            data-sorting-order="desc"
+                            data-sorting-key="name"
+                        >
+                            Nom (Z-A)
+                        </button>
+                    </div>
+                </section>
+            </section>
+            <article>
+                <span class="right-header" id="products-count"></span>
+                <h1>Produits</h1>
+                <div class="products" id="products-list"></div>
+            </article>
+        </main>
+        <footer></footer>
+    </body>
+</html>

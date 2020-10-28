@@ -1,0 +1,9 @@
+# Folders
+.idea
+node_modules
+tests/reports
+dist/
+
+# Files
+selenium-debug.log
+npm-debug.log
