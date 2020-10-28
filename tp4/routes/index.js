@@ -1,8 +1,14 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
+const pages = require('../utils/constants/page-attributes');
 
-router.get("/", (req, res) => {
-    res.render("index", {title: "Accueil", message: "Ça semble fonctionner!"});
+Object.keys(pages).forEach((template) => {
+  const { title, paths } = pages[template];
+  paths.forEach((path) => {
+    router.get(path, (req, res) => {
+      res.render(`pages/${template}`, { title });
+    });
+  });
 });
 
 module.exports = router;
