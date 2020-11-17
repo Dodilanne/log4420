@@ -1,7 +1,7 @@
 module.exports = {
     index: {
         title: "Accueil",
-        paths: ["/", "/accueil"],
+        paths: ["/accueil", "/"],
     },
     products: {
         title: "Produits",

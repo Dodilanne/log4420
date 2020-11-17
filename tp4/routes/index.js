@@ -6,7 +6,11 @@ Object.keys(pages).forEach((template) => {
     const { title, paths, additionalScripts } = pages[template];
     paths.forEach((path) => {
         router.get(path, (_req, res) => {
-            res.render(`pages/${template}`, { title, additionalScripts });
+            res.render(`pages/${template}`, {
+                title,
+                additionalScripts,
+                pageName: template,
+            });
         });
     });
 });
