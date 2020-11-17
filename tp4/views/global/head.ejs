@@ -1,7 +1,23 @@
 <head>
-    <meta charset="UTF-8" />
-    <title>OnlineShop - <%= title %></title>
-    <link rel="stylesheet" type="text/css"
-        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  <meta charset="UTF-8" />
+  <title>OnlineShop - <%= title %></title>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+  <script type="module" src="/assets/js/jquery-3.2.1.min.js"></script>
+  <script type="module" src="/assets/scripts/utils.js"></script>
+  <script type="module" src="/assets/scripts/products.service.js"></script>
+  <script type="module" src="/assets/scripts/shopping-cart.service.js"></script>
+  <script
+    type="module"
+    src="/assets/scripts/shopping-cart.controller.js"
+  ></script>
+  <% if (additionalScripts && additionalScripts.length) { %> 
+    <% additionalScripts.forEach(function (script) { %>
+      <script type="module" src="<%= script %>"></script>
+    <% }); %>
+  <% } %>
 </head>

@@ -3,10 +3,10 @@ const router = express.Router();
 const pages = require('../utils/constants/page-attributes');
 
 Object.keys(pages).forEach((template) => {
-  const { title, paths } = pages[template];
+  const { title, paths, additionalScripts } = pages[template];
   paths.forEach((path) => {
-    router.get(path, (req, res) => {
-      res.render(`pages/${template}`, { title });
+    router.get(path, (_req, res) => {
+      res.render(`pages/${template}`, { title, additionalScripts });
     });
   });
 });

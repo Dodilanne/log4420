@@ -6,6 +6,7 @@ module.exports = {
   products: {
     title: 'Produits',
     paths: ['/produits'],
+    additionalScripts: ['/assets/scripts/products.controller.js'],
   },
   product: {
     title: 'Produit',
@@ -18,6 +19,13 @@ module.exports = {
   'shopping-cart': {
     title: 'Panier',
     paths: ['/panier'],
+    additionalScripts: [
+      '/assets/js/jquery.validate.min.js',
+      '/assets/js/additional-methods.min.js',
+      '/assets/js/messages_fr.js',
+      '/assets/scripts/orders.service.js',
+      '/assets/scripts/order.controller.js',
+    ],
   },
   order: {
     title: 'Commande',
