@@ -7,7 +7,7 @@ const findOneByName = (name) => mongoose.model("Product").findOne({ name });
 const find = async ({ category, sortingMethod }) => {
     let products = await mongoose
         .model("Product")
-        .find({ category })
+        .find(category ? { category } : undefined)
         .sort([sortingMethod]);
     if (!products.length) {
         products = await fillWithDefaults();
