@@ -10,7 +10,7 @@ module.exports = {
     },
     product: {
         title: "Produit",
-        paths: ["/produits/:id"],
+        paths: ["/produits/:productID"],
     },
     contact: {
         title: "Contact",

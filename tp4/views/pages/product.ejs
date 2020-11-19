@@ -5,22 +5,28 @@
         <%- include('../global/header'); %>
         <main>
             <article>
-                <h1 id="product-name">Produit</h1>
+                <h1 id="product-name"><%= product.name %> </h1>
                 <div class="row">
                     <div class="col">
-                        <img alt="product" src="#" id="product-image" />
+                        <img alt="product" src="/assets/img/<%= product.image %>" id="product-image" />
                     </div>
                     <div class="col">
                         <section>
                             <h2>Description</h2>
-                            <p id="product-desc"></p>
+                            <p id="product-desc">
+                                <%= product.description %>
+                            </p>
                         </section>
                         <section>
                             <h2>Caractéristiques</h2>
-                            <ul id="product-features"></ul>
+                            <ul id="product-features">
+                                <% product.features.forEach(function (feature) { %>
+                                    <li><%= feature %></li>
+                                <% }); %>
+                            </ul>
                         </section>
                         <hr />
-                        <form class="pull-right" id="add-to-cart-form">
+                        <form class="pull-right" id="add-to-cart-form" data-product-id="<%= product.id %>">
                             <label for="product-quantity">Quantité:</label>
                             <input
                                 class="form-control"
@@ -37,7 +43,7 @@
                                 <i class="fa fa-cart-plus"></i>&nbsp; Ajouter
                             </button>
                         </form>
-                        <p>Prix: <strong id="product-price"></strong></p>
+                        <p>Prix: <strong id="product-price"><%= product.price.toFixed(2).replace(".", ",") %>&thinsp;$</strong></p>
                     </div>
                 </div>
                 <div class="dialog" id="dialog">

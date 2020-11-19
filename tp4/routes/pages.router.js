@@ -14,18 +14,25 @@ Object.keys(pages).forEach((template) => {
             additionalScripts,
             pageName: template,
         };
-        router.get(path, async (_req, res, next) => {
-            if (template === "products") {
-                try {
+        router.get(path, async (req, res, next) => {
+            try {
+                if (template === "products") {
                     payload.products = await productsController.find({
                         category: undefined,
                         sortingMethod: ["price", 1],
                     });
-                } catch (e) {
-                    next(e);
+                    if (!payload.products) throw new Error("Not found");
+                } else if (template === "product") {
+                    const { productID } = req.params;
+                    payload.product = await productsController.findOneByID(
+                        productID
+                    );
+                    if (!payload.product) throw new Error("Not found");
                 }
+                res.render(route, payload);
+            } catch (e) {
+                res.sendStatus(404);
             }
-            res.render(route, payload);
         });
     });
 });

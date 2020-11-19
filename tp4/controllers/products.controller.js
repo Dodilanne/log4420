@@ -4,6 +4,8 @@ const defaultProducts = require("../utils/constants/default-products");
 
 const findOneByName = (name) => mongoose.model("Product").findOne({ name });
 
+const findOneByID = (id) => mongoose.model("Product").findOne({ id });
+
 const find = async ({ category, sortingMethod }) => {
     let products = await mongoose
         .model("Product")
@@ -33,6 +35,7 @@ const deleteAll = () => mongoose.model("Product").deleteMany({});
 
 module.exports = {
     findOneByName,
+    findOneByID,
     find,
     create,
     deleteAll,
