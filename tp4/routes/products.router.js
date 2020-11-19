@@ -2,6 +2,8 @@ const express = require("express");
 
 const router = express.Router();
 
+const validate = require("../validations/validator.middleware");
+const validators = require("../validations/products.validations");
 const productsController = require("../controllers/products.controller");
 
 const getSortingMethod = (criteria) => {
@@ -11,7 +13,7 @@ const getSortingMethod = (criteria) => {
     return [attr, order];
 };
 
-router.get("/", async (req, res, next) => {
+router.get("/", validate(validators.getProducts), async (req, res, next) => {
     try {
         const { criteria, category } = req.query;
         const sortingMethod = getSortingMethod(criteria || "price-asc");
