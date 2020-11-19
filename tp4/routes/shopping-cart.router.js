@@ -38,4 +38,19 @@ router.post("/", async (req, res, next) => {
     }
 });
 
+router.put("/:productID", async (req, res, next) => {
+    try {
+        let session = req.session;
+        if (session.cart) {
+            if ( session.cart.find((item) => item.productID == req.params.productID )){
+                session.cart["" + req.params.productID] = req.body.quantity;
+                res.sendStatus(204);
+            }
+        }
+        res.sendStatus(404);
+    } catch (e) {
+        console.log(e.message);
+        next(e);
+    }
+});
 module.exports = router;
