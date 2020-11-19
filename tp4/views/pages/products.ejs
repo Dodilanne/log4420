@@ -37,16 +37,23 @@
                 </span>
                 <h1>Produits</h1>
                 <div class="products" id="products-list">
-                    <% products.forEach(function(product) { %> <%-
-                    include('../products/product', product); %> <% }); %>
+                    <% products.forEach(function(product) { %>
+                        <div class="product" data-product-id="<%= product.id %>">
+                            <a href="./produits/<%= product.id %>" title="En savoir plus...">
+                                <h2><%= product.name %></h2>
+                                <img alt="product" src="/assets/img/<%= product.image %>" />
+                                <p class="price"><small>Prix</small> <%= product.price.toFixed(2).replace(".", ",") %>&thinsp;$</p>
+                            </a>
+                        </div>                        
+                    <% }); %>
                 </div>
             </article>
         </main>
         <%- include('../global/footer'); %>
 
         <script type="module">
-            import { initShoppingCartController } from "./assets/scripts/shopping-cart.controller.js";
-            import { initProductController } from "./assets/scripts/products.controller.js";
+            import { initShoppingCartController } from "/assets/scripts/shopping-cart.controller.js";
+            import { initProductController } from "/assets/scripts/products.controller.js";
             initShoppingCartController();
             initProductController();
         </script>
