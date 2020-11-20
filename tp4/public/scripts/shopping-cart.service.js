@@ -17,6 +17,7 @@ export const addItem = (productId, quantity) => {
     return _getItemsFromAPI().then(items => {
         const itemFound = items.find(item => item.productId === productId);
         if (!itemFound) {
+            cache = undefined;
             return fetch("/api/shopping-cart", {
                 method: "POST",
                 headers: {

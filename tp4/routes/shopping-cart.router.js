@@ -5,22 +5,18 @@ const router = express.Router();
 const productsController = require("../controllers/products.controller");
 
 const isInvalidQuantity = (quantity) => isNaN(quantity) || quantity < 1;
-const isInvalidProductID = async (prouductID) => isNaN(prouductID) || !await productsController.findOneByID(prouductID);
+const isInvalidProductID = async (productId) =>
+    isNaN(productId) || !(await productsController.findOneByID(productId));
 
 router.get("/", async (req, res, next) => {
-    try {
-        res.json(req.session.cart);
-    } catch (e) {
-        console.log(e.message);
-        next(e);
-    }
+    res.json(req.session.cart || []);
 });
 
-router.get("/:productID", async (req, res, next) => {
+router.get("/:productId", async (req, res, next) => {
     try {
         if (req.session.cart) {
             let product = req.session.cart.find(
-                (item) => item.productID == req.params.productID
+                (item) => item.productId == req.params.productId
             );
             if (product) {
                 res.json(product);
@@ -38,11 +34,16 @@ router.post("/", async (req, res, next) => {
     try {
         let session = req.session;
         if (!session.cart) session.cart = [];
-        if (await isInvalidProductID(req.body.productID) || isInvalidQuantity(req.body.quantity) ) {
+        if (
+            (await isInvalidProductID(req.body.productId)) ||
+            isInvalidQuantity(req.body.quantity)
+        ) {
             res.sendStatus(400);
             return;
         }
-        let product = session.cart.find( (item) => item.productID === req.body.productID );
+        let product = session.cart.find(
+            (item) => item.productId == req.body.productId
+        );
         if (product) {
             res.sendStatus(400);
             return;
@@ -55,7 +56,7 @@ router.post("/", async (req, res, next) => {
     }
 });
 
-router.put("/:productID", async (req, res, next) => {
+router.put("/:productId", async (req, res, next) => {
     try {
         let session = req.session;
         if (session.cart) {
@@ -64,10 +65,11 @@ router.put("/:productID", async (req, res, next) => {
                 return;
             }
             let product = session.cart.find(
-                (item) => item.productID === req.params.productID
+                (item) => item.productId == req.params.productId
             );
             if (product) {
                 product.quantity = req.body.quantity;
+                console.log(session.cart);
                 res.sendStatus(204);
                 return;
             }
@@ -79,12 +81,12 @@ router.put("/:productID", async (req, res, next) => {
     }
 });
 
-router.delete("/:productID", async (req, res, next) => {
+router.delete("/:productId", async (req, res, next) => {
     try {
         let session = req.session;
         if (session.cart) {
             let index = session.cart.findIndex(
-                (item) => item.productID === req.params.productID
+                (item) => item.productId === req.params.productId
             );
             if (index) {
                 session.cart.splice(index, 1);
