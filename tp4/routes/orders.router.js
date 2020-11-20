@@ -21,4 +21,15 @@ router.get("/:id", async (req, res, next) => {
         next(e);
     }
 });
+
+router.post("/", async (req, res, next) => {
+    try {
+        res.json(await ordersController.create({order: req.body}));
+        
+    } catch (e) {
+        console.log(e.message);
+        next(e);
+    }
+});
+
 module.exports = router;

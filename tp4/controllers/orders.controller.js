@@ -11,7 +11,15 @@ const getByID = async ({ orderID }) => {
     .findOne({id: orderID});
 };
 
+const create = async ({order}) =>{
+    const existingRecord = await await mongoose
+    .model("Order")
+    .findOne({id: order.id});
+    if (existingRecord) return existingRecord;
+    return mongoose.model("Order").create(order);
+}
 module.exports = {
     get,
     getByID,
+    create
 };
