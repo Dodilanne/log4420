@@ -42,8 +42,9 @@ router.put("/:productID", async (req, res, next) => {
     try {
         let session = req.session;
         if (session.cart) {
-            if ( session.cart.find((item) => item.productID == req.params.productID )){
-                session.cart["" + req.params.productID] = req.body.quantity;
+            let product=session.cart.find((item) => item.productID === req.params.productID )
+            if ( product){
+                product.quantity = req.body.quantity;
                 res.sendStatus(204);
             }
         }
@@ -58,9 +59,9 @@ router.delete("/:productID", async (req, res, next) => {
     try {
         let session = req.session;
         if (session.cart) {
-            if ( session.cart.find((item) => item.productID == req.params.productID )){
-                delete session.cart["" + req.params.productID];
-                res.sendStatus(204);
+            let index = session.cart.findIndex((item) => item.productID === req.params.productID);
+            if ( index ){
+                session.cart.splice(index,1);
             }
         }
         res.sendStatus(404);
