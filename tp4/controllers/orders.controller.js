@@ -1,8 +1,11 @@
 const mongoose = require("mongoose");
 
+const get = async () => {
+    return await mongoose
+    .model("Order");
+};
 
-
-const get = async ({ orderID }) => {
+const getByID = async ({ orderID }) => {
     return await mongoose
     .model("Order")
     .findById({ orderID });
@@ -10,4 +13,5 @@ const get = async ({ orderID }) => {
 
 module.exports = {
     get,
+    getByID,
 };
