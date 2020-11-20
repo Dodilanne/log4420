@@ -33,7 +33,6 @@ router.post("/", async (req, res, next) => {
 
 router.delete("/:id", async (req, res, next) => {
     try {
-        res.sendStatus(204);
         let result = await ordersController.deleteByID({ orderID: req.params.id});
         if (result.deletedCount != 0) {
             res.sendStatus(204);
