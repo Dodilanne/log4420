@@ -15,7 +15,12 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:id", async (req, res, next) => {
     try {
-        res.json(await ordersController.getByID({ orderID: req.params.id }));
+        let order = await ordersController.getByID({ orderID: req.params.id });
+        if (order) {
+            res.json(order);
+            return;
+        }
+        res.sendStatus(404);
     } catch (e) {
         console.log(e.message);
         next(e);
@@ -24,7 +29,7 @@ router.get("/:id", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
     try {
-        res.json(await ordersController.create({ order: req.body }));
+        res.sendStatus(await ordersController.create({ order: req.body }));
     } catch (e) {
         console.log(e.message);
         next(e);
@@ -33,7 +38,9 @@ router.post("/", async (req, res, next) => {
 
 router.delete("/:id", async (req, res, next) => {
     try {
-        let result = await ordersController.deleteByID({ orderID: req.params.id});
+        let result = await ordersController.deleteByID({
+            orderID: req.params.id,
+        });
         if (result.deletedCount != 0) {
             res.sendStatus(204);
             return;

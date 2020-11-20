@@ -9,11 +9,12 @@ const getByID = async ({ orderID }) => {
 };
 
 const create = async ({ order }) => {
+    //TODO validate order fields
     const existingRecord = await await mongoose
         .model("Order")
         .findOne({ id: order.id });
-    if (existingRecord) return existingRecord;
-    return mongoose.model("Order").create(order);
+    if (existingRecord) return 400;
+    return 201;
 };
 
 const deleteByID = async ({ orderID }) => {
