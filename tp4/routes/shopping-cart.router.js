@@ -53,4 +53,15 @@ router.put("/:productID", async (req, res, next) => {
         next(e);
     }
 });
+
+router.delete("/", async (req, res, next) => {
+    try {
+        delete req.session.cart;
+        res.sendStatus(204);
+    } catch (e) {
+        console.log(e.message);
+        next(e);
+    }
+});
+
 module.exports = router;
