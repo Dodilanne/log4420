@@ -46,6 +46,7 @@ router.put("/:productID", async (req, res, next) => {
             if ( product){
                 product.quantity = req.body.quantity;
                 res.sendStatus(204);
+                return;
             }
         }
         res.sendStatus(404);
@@ -62,6 +63,8 @@ router.delete("/:productID", async (req, res, next) => {
             let index = session.cart.findIndex((item) => item.productID === req.params.productID);
             if ( index ){
                 session.cart.splice(index,1);
+                res.sendStatus(204)
+                return;
             }
         }
         res.sendStatus(404);
