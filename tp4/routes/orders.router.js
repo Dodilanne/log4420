@@ -32,4 +32,24 @@ router.post("/", async (req, res, next) => {
     }
 });
 
+router.delete("/:id", async (req, res, next) => {
+    try {
+        let result = await ordersController.deleteByID({orderID: req.params.id});
+        if(result.deletedCount !=0) res.sendStatus(204);
+        res.sendStatus(404);
+    } catch (e) {
+        console.log(e.message);
+        next(e);
+    }
+});
+
+router.delete("/", async (req, res, next) => {
+    try {
+        ordersController.deleteAll().then(()=>res.sendStatus(204));
+        
+    } catch (e) {
+        console.log(e.message);
+        next(e);
+    }
+});
 module.exports = router;
