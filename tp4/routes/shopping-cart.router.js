@@ -2,6 +2,11 @@ const express = require("express");
 
 const router = express.Router();
 
+const productsController = require("../controllers/products.controller");
+
+const isInvalidQuantity = (quantity) => isNaN(quantity) || quantity < 1;
+const isInvalidProductID = async (prouductID) => isNaN(prouductID) || !await productsController.findOneByID(prouductID);
+
 router.get("/", async (req, res, next) => {
     try {
         res.json(req.session.cart);
@@ -33,15 +38,17 @@ router.post("/", async (req, res, next) => {
     try {
         let session = req.session;
         if (!session.cart) session.cart = [];
-        let product = session.cart.find(
-            (item) => item.productID === req.body.productID
-        );
-        if (product || req.body.quantity > 3) {
-            res.send(400);
+        if (await isInvalidProductID(req.body.productID) || isInvalidQuantity(req.body.quantity) ) {
+            res.sendStatus(400);
+            return;
+        }
+        let product = session.cart.find( (item) => item.productID === req.body.productID );
+        if (product) {
+            res.sendStatus(400);
             return;
         }
         session.cart.push(req.body);
-        res.send(201);
+        res.sendStatus(201);
     } catch (e) {
         console.log(e.message);
         next(e);
@@ -52,7 +59,7 @@ router.put("/:productID", async (req, res, next) => {
     try {
         let session = req.session;
         if (session.cart) {
-            if (req.body.quantity > 3) {
+            if (isInvalidQuantity(req.body.quantity)) {
                 res.sendStatus(400);
                 return;
             }
