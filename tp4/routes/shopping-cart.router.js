@@ -54,6 +54,22 @@ router.put("/:productID", async (req, res, next) => {
     }
 });
 
+router.delete("/:productID", async (req, res, next) => {
+    try {
+        let session = req.session;
+        if (session.cart) {
+            if ( session.cart.find((item) => item.productID == req.params.productID )){
+                delete session.cart["" + req.params.productID];
+                res.sendStatus(204);
+            }
+        }
+        res.sendStatus(404);
+    } catch (e) {
+        console.log(e.message);
+        next(e);
+    }
+});
+
 router.delete("/", async (req, res, next) => {
     try {
         delete req.session.cart;
