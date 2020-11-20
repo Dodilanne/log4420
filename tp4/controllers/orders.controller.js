@@ -1,24 +1,33 @@
 const mongoose = require("mongoose");
-
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
 const get = async () => {
-    return await mongoose.model("Order").find();
+    return mongoose.model("Order").find();
 };
 
 const getByID = async ({ orderID }) => {
-    return await mongoose.model("Order").findOne({ id: orderID });
+    return mongoose.model("Order").findOne({ id: orderID });
 };
 
 const create = async ({ order }) => {
     //TODO validate order fields
-    const existingRecord = await await mongoose
-        .model("Order")
-        .findOne({ id: order.id });
+    if( !order.firstName || 
+        !order.lastName || 
+        !validateEmail(order.email) || 
+        !validatePhone(order.phone) ||
+        !validateProducts(order.products)
+        ){
+            return 400;
+    }
+    const existingRecord =  await getByID(order.id);
     if (existingRecord) return 400;
     return 201;
 };
 
 const deleteByID = async ({ orderID }) => {
-    return await mongoose.model("Order").deleteOne({id: orderID});
+    return mongoose.model("Order").deleteOne({id: orderID});
 };
 
 const deleteAll = async () => mongoose.model("Order").deleteMany({});
