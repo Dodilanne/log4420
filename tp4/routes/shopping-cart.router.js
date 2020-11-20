@@ -17,7 +17,10 @@ router.get("/:productID", async (req, res, next) => {
             let product = req.session.cart.find(
                 (item) => item.productID == req.params.productID
             );
-            if (product) res.json(product);
+            if (product) {
+                res.json(product);
+                return;
+            }
         }
         res.sendStatus(404);
     } catch (e) {
@@ -30,8 +33,15 @@ router.post("/", async (req, res, next) => {
     try {
         let session = req.session;
         if (!session.cart) session.cart = [];
+        let product = session.cart.find(
+            (item) => item.productID === req.body.productID
+        );
+        if (product || req.body.quantity > 3) {
+            res.send(400);
+            return;
+        }
         session.cart.push(req.body);
-        res.json(req.session.cart);
+        res.send(201);
     } catch (e) {
         console.log(e.message);
         next(e);
@@ -42,8 +52,14 @@ router.put("/:productID", async (req, res, next) => {
     try {
         let session = req.session;
         if (session.cart) {
-            let product=session.cart.find((item) => item.productID === req.params.productID )
-            if ( product){
+            if (req.body.quantity > 3) {
+                res.sendStatus(400);
+                return;
+            }
+            let product = session.cart.find(
+                (item) => item.productID === req.params.productID
+            );
+            if (product) {
                 product.quantity = req.body.quantity;
                 res.sendStatus(204);
                 return;
@@ -60,10 +76,12 @@ router.delete("/:productID", async (req, res, next) => {
     try {
         let session = req.session;
         if (session.cart) {
-            let index = session.cart.findIndex((item) => item.productID === req.params.productID);
-            if ( index ){
-                session.cart.splice(index,1);
-                res.sendStatus(204)
+            let index = session.cart.findIndex(
+                (item) => item.productID === req.params.productID
+            );
+            if (index) {
+                session.cart.splice(index, 1);
+                res.sendStatus(204);
                 return;
             }
         }
