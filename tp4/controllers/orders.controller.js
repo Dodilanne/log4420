@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 
 const get = async () => {
     return await mongoose
-    .model("Order");
+    .model("Order").find();
 };
 
 const getByID = async ({ orderID }) => {
     return await mongoose
     .model("Order")
-    .findById({ orderID });
+    .findOne({id: orderID});
 };
 
 module.exports = {

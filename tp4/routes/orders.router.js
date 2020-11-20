@@ -6,11 +6,19 @@ const ordersController = require("../controllers/orders.controller");
 
 router.get("/", async (req, res, next) => {
     try {
-        res.json(ordersController.get());
+        res.json(await ordersController.get());
     } catch (e) {
         console.log(e.message);
         next(e);
     }
 });
 
+router.get("/:id", async (req, res, next) => {
+    try {
+        res.json(await ordersController.getByID({orderID: req.params.id}));
+    } catch (e) {
+        console.log(e.message);
+        next(e);
+    }
+});
 module.exports = router;
