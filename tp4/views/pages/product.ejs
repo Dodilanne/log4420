@@ -2,7 +2,7 @@
 <html lang="fr">
     <%- include('../global/head'); %>
     <body>
-        <%- include('../global/header'); %>
+        <%- include('../global/header', { cartQuantity }); %>
         <main>
             <article>
                 <h1 id="product-name"><%= product.name %> </h1>
