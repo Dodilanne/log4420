@@ -10,18 +10,18 @@ const getByID = async ({ orderID }) => {
 };
 
 const create = async ({ order }) => {
-    //TODO validate order products
+    //TODO validate order products await validateProducts({ products: order.products })
     if (
-        validator.isEmpty(order.firstName+"") ||
-        !validator.isAlphanumeric(order.firstName+"") ||
-        validator.isEmpty(order.lastName+"") ||
-        !validator.isAlphanumeric(order.lastName+"") ||
-        !validator.isEmail(order.email+"") ||
-        !validator.isMobilePhone(order.phone+"")
+        validator.isEmpty(order.firstName + "") ||
+        !validator.isAlphanumeric(order.firstName + "") ||
+        validator.isEmpty(order.lastName + "") ||
+        !validator.isAlphanumeric(order.lastName + "") ||
+        !validator.isEmail(order.email + "") ||
+        !validator.isMobilePhone(order.phone + "")
     ) {
         return 400;
     }
-    const existingRecord = await getByID({orderID:order.id});
+    const existingRecord = await getByID({ orderID: order.id });
     if (!!existingRecord) return 400;
     mongoose.model("Order").create(order);
     return 201;
