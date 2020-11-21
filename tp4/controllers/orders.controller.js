@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
-function validateEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
+const validator = require("validator");
+
 const get = async () => {
     return mongoose.model("Order").find();
 };
@@ -12,22 +10,25 @@ const getByID = async ({ orderID }) => {
 };
 
 const create = async ({ order }) => {
-    //TODO validate order fields
-    if( !order.firstName || 
-        !order.lastName || 
-        !validateEmail(order.email) || 
-        !validatePhone(order.phone) ||
-        !validateProducts(order.products)
-        ){
-            return 400;
+    //TODO validate order products
+    if (
+        validator.isEmpty(order.firstName+"") ||
+        !validator.isAlphanumeric(order.firstName+"") ||
+        validator.isEmpty(order.lastName+"") ||
+        !validator.isAlphanumeric(order.lastName+"") ||
+        !validator.isEmail(order.email+"") ||
+        !validator.isMobilePhone(order.phone+"")
+    ) {
+        return 400;
     }
-    const existingRecord =  await getByID(order.id);
-    if (existingRecord) return 400;
+    const existingRecord = await getByID({orderID:order.id});
+    if (!!existingRecord) return 400;
+    mongoose.model("Order").create(order);
     return 201;
 };
 
 const deleteByID = async ({ orderID }) => {
-    return mongoose.model("Order").deleteOne({id: orderID});
+    return mongoose.model("Order").deleteOne({ id: orderID });
 };
 
 const deleteAll = async () => mongoose.model("Order").deleteMany({});
