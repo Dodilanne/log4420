@@ -3,7 +3,6 @@ const express = require("express");
 const router = express.Router();
 
 const productsController = require("../controllers/products.controller");
-const { reduce } = require("../utils/constants/default-products");
 const pages = require("../utils/constants/page-attributes");
 
 const getCartQuantity = (cart) =>
