@@ -16,6 +16,7 @@ Object.keys(pages).forEach((template) => {
             const { cart } = req.session;
             const payload = {
                 title,
+                cart: cart || [],
                 additionalScripts,
                 pageName: template,
                 cartQuantity: cart ? getCartQuantity(cart) : 0,
@@ -23,6 +24,7 @@ Object.keys(pages).forEach((template) => {
             try {
                 switch (template) {
                     case "products":
+                    case "shopping-cart":
                         payload.products = await productsController.find({
                             category: undefined,
                             sortingMethod: ["price", 1],
