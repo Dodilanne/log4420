@@ -48,7 +48,12 @@
                         </tbody>
                     </table>
                     <p class="shopping-cart-total">
-                        Total: <strong id="total-amount"></strong>
+                        Total: <strong id="total-amount">
+                          <%- include('../global/price.ejs', { price: cart.reduce((total, { productId, quantity }) => {
+                            const { price } = products.find(({ id }) => id == productId);
+                            return total + quantity * price;
+                          }, 0) }); %>
+                        </strong>
                     </p>
                     <a class="btn pull-right" href="./order.html"
                         >Commander <i class="fa fa-angle-double-right"></i

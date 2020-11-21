@@ -86,9 +86,9 @@ router.delete("/:productId", async (req, res, next) => {
         let session = req.session;
         if (session.cart) {
             let index = session.cart.findIndex(
-                (item) => item.productId === req.params.productId
+                (item) => item.productId == req.params.productId
             );
-            if (index) {
+            if (index > -1) {
                 session.cart.splice(index, 1);
                 res.sendStatus(204);
                 return;
