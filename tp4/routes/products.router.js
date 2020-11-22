@@ -43,7 +43,6 @@ router.get("/:productID", async (req, res, next) => {
 
 router.post("/", validateBody(validators.post), async (req, res, next) => {
     try {
-        console.log("WUUUT");
         const { id } = req.body;
         const product = await productsController.findOneByID(id);
         if (!!product) return res.sendStatus(400);

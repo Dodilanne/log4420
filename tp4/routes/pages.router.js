@@ -3,7 +3,6 @@ const express = require("express");
 const router = express.Router();
 
 const productsController = require("../controllers/products.controller");
-const ordersController = require("../controllers/orders.controller");
 const pages = require("../utils/constants/page-attributes");
 
 const getCartQuantity = (cart) =>
@@ -12,7 +11,7 @@ const getCartQuantity = (cart) =>
 Object.keys(pages).forEach((template) => {
     const { title, paths, additionalScripts, action } = pages[template];
     paths.forEach((path) => {
-        router[action || "get"](path, async (req, res, next) => {
+        router[action || "get"](path, async function (req, res, next) {
             const route = `pages/${template}`;
             const { cart } = req.session;
             const payload = {

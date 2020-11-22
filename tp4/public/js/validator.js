@@ -1,6 +1,6 @@
-import "./jquery-3.2.1.min.js"
-import "./jquery.validate.min.js"
-import "./additional-methods.min.js"
+import "./jquery-3.2.1.min.js";
+import "./jquery.validate.min.js";
+import "./additional-methods.min.js";
 
 /**@type {JQueryStatic} */
 // @ts-ignore
@@ -14,7 +14,7 @@ const $ = window.$;
 /**
  * @type {{
  *  (): void,
- *  messages: Record<string, string>, 
+ *  messages: Record<string, string>,
  *  format: (msg: string) => string,
  *  addMethod: (name: string, test: (value: string) => boolean, msg: string) => void
  * }}
@@ -23,7 +23,7 @@ const $ = window.$;
 export const validator = $.validator;
 
 /**
- * 
+ *
  * @param {JQuery<HTMLElement>} jqueryForm
  * @returns {boolean}
  */
@@ -33,13 +33,13 @@ export function isFormValid(jqueryForm) {
 }
 
 /**
- * 
- * @param {JQuery<HTMLElement>} jqueryForm 
+ *
+ * @param {JQuery<HTMLElement>} jqueryForm
  * @return {(config: {
  *      rules: Record<string, Record<string, boolean>>
  * }) => void}
  */
 export function getValidateForm(jqueryForm) {
     // @ts-ignore
-    return jqueryForm.validate
+    return jqueryForm.validate.bind(jqueryForm);
 }

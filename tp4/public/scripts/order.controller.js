@@ -59,9 +59,6 @@ export function initOrderController() {
         },
         "La date d'expiration de votre carte de crédit est invalide."
     );
-
-    orderForm.on("submit", _createOrder);
-
     getValidateForm(orderForm)({
         rules: {
             phone: {
@@ -77,4 +74,6 @@ export function initOrderController() {
             },
         },
     });
+
+    orderForm.on("submit", _createOrder);
 }

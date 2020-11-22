@@ -36,7 +36,6 @@ export function createOrder(order) {
             });
         })
         .then((res) => {
-            console.log(res);
             return res.json();
         });
 }

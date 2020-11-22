@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const validator = require("validator");
 
 const get = async () => {
     return mongoose.model("Order").find();
