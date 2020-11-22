@@ -4,13 +4,23 @@
     <body>
         <%- include('../global/header', { cartQuantity }); %>
         <main>
+            <% if (order) { %>
             <article>
-                <h1>Votre commande est confirmée <span id="name"></span>!</h1>
+                <h1>
+                    Votre commande est confirmée
+                    <span id="name"
+                        ><%= order.firstName %> <%= order.lastName %></span
+                    >!
+                </h1>
                 <p>
                     Votre numéro de confirmation est le
-                    <strong id="confirmation-number"></strong>.
+                    <strong id="confirmation-number"
+                        ><%= order.id <= 99999 ? (`0000${order.id}`).slice(-5):
+                        order.id %></strong
+                    >.
                 </p>
             </article>
+            <% } %>
         </main>
         <%- include('../global/footer'); %>
         <script type="module">

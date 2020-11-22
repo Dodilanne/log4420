@@ -29,7 +29,9 @@ router.get("/:id", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
     try {
-        res.sendStatus(await ordersController.create({ order: req.body }));
+        const status = await ordersController.create({ order: req.body });
+        req.session.order = req.body;
+        res.status(status).json({ success: status === 201 });
     } catch (e) {
         console.log(e.message);
         next(e);

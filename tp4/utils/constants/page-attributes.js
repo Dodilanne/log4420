@@ -33,6 +33,7 @@ module.exports = {
     },
     confirmation: {
         title: "Confirmation",
+        action: 'post',
         paths: ["/confirmation"],
     },
 };

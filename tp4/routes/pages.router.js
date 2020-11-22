@@ -3,15 +3,16 @@ const express = require("express");
 const router = express.Router();
 
 const productsController = require("../controllers/products.controller");
+const ordersController = require("../controllers/orders.controller");
 const pages = require("../utils/constants/page-attributes");
 
 const getCartQuantity = (cart) =>
     cart.reduce((total, { quantity }) => total + quantity, 0);
 
 Object.keys(pages).forEach((template) => {
-    const { title, paths, additionalScripts } = pages[template];
+    const { title, paths, additionalScripts, action } = pages[template];
     paths.forEach((path) => {
-        router.get(path, async (req, res, next) => {
+        router[action || "get"](path, async (req, res, next) => {
             const route = `pages/${template}`;
             const { cart } = req.session;
             const payload = {
@@ -37,6 +38,9 @@ Object.keys(pages).forEach((template) => {
                             productID
                         );
                         if (!payload.product) throw new Error("Not found");
+                        break;
+                    case "confirmation":
+                        payload.order = req.session.order;
                 }
                 res.render(route, payload);
             } catch (e) {
