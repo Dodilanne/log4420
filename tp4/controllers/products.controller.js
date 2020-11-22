@@ -31,6 +31,8 @@ const fillWithDefaults = async () => {
     return products;
 };
 
+const deleteOne = (id) => mongoose.model("Product").deleteOne({ id });
+
 const deleteAll = () => mongoose.model("Product").deleteMany({});
 
 module.exports = {
@@ -38,6 +40,7 @@ module.exports = {
     findOneByID,
     find,
     create,
+    deleteOne,
     deleteAll,
     fillWithDefaults,
 };
