@@ -20,7 +20,7 @@ const find = async ({ category, sortingMethod }) => {
 
 const create = async (product) => {
     const existingRecord = await findOneByName(product.name);
-    if (existingRecord) return existingRecord;
+    if (!!existingRecord) return existingRecord;
     return mongoose.model("Product").create(product);
 };
 

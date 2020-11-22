@@ -16,23 +16,19 @@ const getSortingMethod = (criteria) => {
     return [attr, order];
 };
 
-router.get(
-    "/",
-    validateQuery(validators.getProducts),
-    async (req, res, next) => {
-        try {
-            const { criteria, category } = req.query;
-            const sortingMethod = getSortingMethod(criteria || "price-asc");
-            const products = await productsController.find({
-                category,
-                sortingMethod,
-            });
-            res.status(200).json(products);
-        } catch (e) {
-            next(e);
-        }
+router.get("/", validateQuery(validators.get), async (req, res, next) => {
+    try {
+        const { criteria, category } = req.query;
+        const sortingMethod = getSortingMethod(criteria || "price-asc");
+        const products = await productsController.find({
+            category,
+            sortingMethod,
+        });
+        res.status(200).json(products);
+    } catch (e) {
+        next(e);
     }
-);
+});
 
 router.get("/:productID", async (req, res, next) => {
     try {
@@ -45,21 +41,17 @@ router.get("/:productID", async (req, res, next) => {
     }
 });
 
-router.post(
-    "/",
-    validateBody(validators.postProducts),
-    async (req, res, next) => {
-        try {
-            const { id } = req.body;
-            const product = await productsController.findOneByID(id);
-            if (product) res.sendStatus(400);
-            await productsController.create(req.body);
-            res.sendStatus(201);
-        } catch (e) {
-            res.sendStatus(400);
-        }
+router.post("/", validateBody(validators.post), async (req, res, next) => {
+    try {
+        const { id } = req.body;
+        const product = await productsController.findOneByID(id);
+        if (!!product) res.sendStatus(400);
+        await productsController.create(req.body);
+        res.sendStatus(201);
+    } catch (e) {
+        res.sendStatus(400);
     }
-);
+});
 
 router.delete("/:productID", async (req, res, next) => {
     try {

@@ -3,12 +3,12 @@ const Joi = require("joi");
 const categories = ["cameras", "computers", "consoles", "screens"];
 const criterias = ["alpha-asc", "alpha-dsc", "price-asc", "price-dsc"];
 
-const getProducts = Joi.object({
+const get = Joi.object({
     category: Joi.valid(...categories),
     criteria: Joi.valid(...criterias),
 });
 
-const postProducts = Joi.object({
+const post = Joi.object({
     id: Joi.number().integer().positive().required(),
     name: Joi.string().required(),
     price: Joi.number().positive().required(),
@@ -19,6 +19,6 @@ const postProducts = Joi.object({
 });
 
 module.exports = {
-    getProducts,
-    postProducts,
+    get,
+    post,
 };

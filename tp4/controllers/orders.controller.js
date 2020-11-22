@@ -5,30 +5,18 @@ const get = async () => {
     return mongoose.model("Order").find();
 };
 
-const getByID = async ({ orderID }) => {
-    return mongoose.model("Order").findOne({ id: orderID });
+const getByID = async (id) => {
+    return mongoose.model("Order").findOne({ id });
 };
 
-const create = async ({ order }) => {
-    //TODO validate order products await validateProducts({ products: order.products })
-    if (
-        validator.isEmpty(order.firstName + "") ||
-        !validator.isAlphanumeric(order.firstName + "") ||
-        validator.isEmpty(order.lastName + "") ||
-        !validator.isAlphanumeric(order.lastName + "") ||
-        !validator.isEmail(order.email + "") ||
-        !validator.isMobilePhone(order.phone + "")
-    ) {
-        return 400;
-    }
-    const existingRecord = await getByID({ orderID: order.id });
-    if (!!existingRecord) return 400;
-    mongoose.model("Order").create(order);
-    return 201;
+const create = async (order) => {
+    const existingRecord = await getByID(order.id);
+    if (!!existingRecord) return existingRecord;
+    return mongoose.model("Order").create(order);
 };
 
-const deleteByID = async ({ orderID }) => {
-    return mongoose.model("Order").deleteOne({ id: orderID });
+const deleteByID = async (id) => {
+    return mongoose.model("Order").deleteOne({ id });
 };
 
 const deleteAll = async () => mongoose.model("Order").deleteMany({});
