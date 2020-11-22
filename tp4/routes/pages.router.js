@@ -28,7 +28,7 @@ Object.keys(pages).forEach((template) => {
                     case "shopping-cart":
                         payload.products = await productsController.find({
                             category: undefined,
-                            sortingMethod: ["price", 1],
+                            sortingMethod: { price: 1 },
                         });
                         if (!payload.products) throw new Error("Not found");
                         break;

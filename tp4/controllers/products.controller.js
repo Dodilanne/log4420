@@ -6,16 +6,19 @@ const findOneByName = (name) => mongoose.model("Product").findOne({ name });
 
 const findOneByID = (id) => mongoose.model("Product").findOne({ id });
 
-const find = async ({ category, sortingMethod }) => {
+const find = async (
+    { category, sortingMethod } = {
+        category: undefined,
+        sortingMethod: { price: 1 },
+    }
+) => {
     let products = await mongoose
         .model("Product")
         .find(category ? { category } : undefined)
-        .sort([sortingMethod]);
-    if (!products.length) {
-        products = await fillWithDefaults();
-    }
+        .collation({ locale: "fr", strength: 2 })
+        .sort(sortingMethod);
 
-    return products;
+    return products || [];
 };
 
 const create = async (product) => {

@@ -13,7 +13,7 @@ const getSortingMethod = (criteria) => {
     const [arg, dir] = criteria.split("-");
     const attr = arg === "price" ? "price" : "name";
     const order = dir === "asc" ? 1 : -1;
-    return [attr, order];
+    return { [attr]: order };
 };
 
 router.get("/", validateQuery(validators.get), async (req, res, next) => {
@@ -43,6 +43,7 @@ router.get("/:productID", async (req, res, next) => {
 
 router.post("/", validateBody(validators.post), async (req, res, next) => {
     try {
+        console.log("WUUUT");
         const { id } = req.body;
         const product = await productsController.findOneByID(id);
         if (!!product) res.sendStatus(400);

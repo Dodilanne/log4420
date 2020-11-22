@@ -5,6 +5,7 @@ const router = express.Router();
 const { validateBody } = require("../validations/validator.middleware");
 const validators = require("../validations/orders.validations");
 const ordersController = require("../controllers/orders.controller");
+const productsController = require("../controllers/products.controller");
 
 router.get("/", async (req, res, next) => {
     try {
@@ -32,6 +33,11 @@ router.post("/", validateBody(validators.post), async (req, res, next) => {
         const { id } = req.body;
         const order = await ordersController.getByID(id);
         if (!!order) res.sendStatus(400);
+        const products = await productsController.find();
+        const allProductsExist = req.body.products.every(
+            ({ id }) => products.findIndex((product) => product.id == id) > -1
+        );
+        if (!allProductsExist) res.sendStatus(400);
         await ordersController.create(req.body);
         req.session.order = req.body;
         res.status(201).json(req.body);
