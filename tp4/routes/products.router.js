@@ -46,7 +46,7 @@ router.post("/", validateBody(validators.post), async (req, res, next) => {
         console.log("WUUUT");
         const { id } = req.body;
         const product = await productsController.findOneByID(id);
-        if (!!product) res.sendStatus(400);
+        if (!!product) return res.sendStatus(400);
         await productsController.create(req.body);
         res.sendStatus(201);
     } catch (e) {
@@ -58,7 +58,7 @@ router.delete("/:productID", async (req, res, next) => {
     try {
         const { productID } = req.params;
         const product = await productsController.findOneByID(productID);
-        if (!product) res.sendStatus(404);
+        if (!product) return res.sendStatus(404);
         await productsController.deleteOne(productID);
         res.sendStatus(204);
     } catch (e) {

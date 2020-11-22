@@ -39,12 +39,12 @@ router.post("/", validateBody(validators.post), async (req, res, next) => {
         const dbProduct = await productsController.findOneByID(
             req.body.productId
         );
-        if (!dbProduct) res.sendStatus(400);
+        if (!dbProduct) return res.sendStatus(400);
         let product = session.cart.find(
             (item) => item.productId == req.body.productId
         );
         if (product) {
-            res.sendStatus(400);
+            return res.sendStatus(400);
         }
         session.cart.push(req.body);
         res.sendStatus(201);
@@ -66,7 +66,7 @@ router.put(
                 );
                 if (product) {
                     product.quantity = req.body.quantity;
-                    res.sendStatus(204);
+                    return res.sendStatus(204);
                 }
             }
             res.sendStatus(404);

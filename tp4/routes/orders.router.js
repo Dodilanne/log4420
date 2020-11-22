@@ -21,6 +21,7 @@ router.get("/:id", async (req, res, next) => {
         let order = await ordersController.getByID(req.params.id);
         if (order) {
             res.json(order);
+            return;
         }
         res.sendStatus(404);
     } catch (e) {
@@ -32,12 +33,15 @@ router.post("/", validateBody(validators.post), async (req, res, next) => {
     try {
         const { id } = req.body;
         const order = await ordersController.getByID(id);
-        if (!!order) res.sendStatus(400);
+        if (!!order) {
+            res.sendStatus(400);
+            return;
+        }
         const products = await productsController.find();
         const allProductsExist = req.body.products.every(
             ({ id }) => products.findIndex((product) => product.id == id) > -1
         );
-        if (!allProductsExist) res.sendStatus(400);
+        if (!allProductsExist) return res.sendStatus(400);
         await ordersController.create(req.body);
         req.session.order = req.body;
         res.status(201).json(req.body);
