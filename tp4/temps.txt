@@ -4,8 +4,12 @@ TP4
 
 Pablo : 
 	03/11 : 0h40min
-	
-	Total : 0h40min
+	10/11 : 3h00
+	18/11 : 3h00
+	19/11 : 1h30
+	20/11 : 3h00
+	21/11 : 2h00
+	Total : 13h10min
 
 Vincent :
 	27/10 : 0h30
@@ -17,4 +21,4 @@ Vincent :
 
 	Total : 15h00
 
-Total de l'équipe : 
+Total de l'équipe : 18h10
