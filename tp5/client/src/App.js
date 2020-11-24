@@ -9,6 +9,9 @@ import { PageNotFoundComponent } from "./PageNotFoundComponent.js";
 import { ProductComponent } from './ProductComponent/ProductComponent';
 import { ProductsComponent } from "./ProductsComponent/ProductsComponent";
 import { ShoppingCartComponent } from './ShoppingCartComponent/ShoppingCartComponent';
+import { configureAxios } from './config/api-config';
+
+configureAxios();
 
 function App() {
   return (
