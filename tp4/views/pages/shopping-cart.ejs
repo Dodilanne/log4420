@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <%- include('../global/head'); %>
+    <body>
+        <%- include('../global/header', { cartQuantity }); %>
+        <main>
+            <article>
+                <h1>Panier</h1>
+                <div id="shopping-cart-container">
+                    <% if (!cart.length) { %>
+                    <p>Aucun produit dans le panier.</p>
+                    <% } else { %>
+                    <table class="table shopping-cart-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Produit</th>
+                                <th>Prix unitaire</th>
+                                <th>Quantité</th>
+                                <th>Prix</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% cart.forEach(function ({ quantity, productId }) { %>
+                                <% const { price, name } = products.find(({ id }) => id == productId); %>
+                                <tr data-product-id="<%= productId %>">
+                                    <td><button title="Supprimer" class="remove-item-button" data-id="<%= productId %>"><i class="fa fa-times"></i></button></td>
+                                    <td><a href="./product.html?id=<%= productId %>"><%= name %></a></td>
+                                    <td class="unit-price">
+                                      <%- include('../global/price.ejs', { price }); %>
+                                    </td>
+                                    <td>
+                                      <div data-id="<%= productId %>}" class="row incrementor">
+                                        <div class="col">
+                                          <button title="Retirer" action="removeItem" <%= quantity < 2 ? "disabled" : "" %> class="remove-quantity-button"><i class="fa fa-minus"></i></button>
+                                        </div>
+                                        <div class="col qty quantity"><%= quantity %></div>
+                                        <div class="col">
+                                          <button title="Ajouter" action="addItem" class="add-quantity-button"><i class="fa fa-plus"></i></button>
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td class="price">
+                                      <%- include('../global/price.ejs', { price: price * quantity }); %>
+                                    </td>
+                                  </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                    <p class="shopping-cart-total">
+                        Total: <strong id="total-amount">
+                          <%- include('../global/price.ejs', { price: cart.reduce((total, { productId, quantity }) => {
+                            const { price } = products.find(({ id }) => id == productId);
+                            return total + quantity * price;
+                          }, 0) }); %>
+                        </strong>
+                    </p>
+                    <a class="btn pull-right" href="/commande"
+                        >Commander <i class="fa fa-angle-double-right"></i
+                    ></a>
+                    <button class="btn" id="remove-all-items-button">
+                        <i class="fa fa-trash-o"></i>&nbsp; Vider le panier
+                    </button>
+                    <% } %>
+                </div>
+            </article>
+        </main>
+        <%- include('../global/footer'); %>
+
+        <script type="module">
+            import { initShoppingCartController } from "/assets/scripts/shopping-cart.controller.js";
+            import { initProductController } from "/assets/scripts/products.controller.js";
+            initShoppingCartController();
+            initProductController();
+        </script>
+    </body>
+</html>
