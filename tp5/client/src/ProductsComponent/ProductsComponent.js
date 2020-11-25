@@ -18,7 +18,7 @@ export function ProductsComponent() {
                 if(prod.ok) {
                     setProducts(await prod.json());
                 } else {
-                    throw prod.json();
+                    throw await prod.json();
                 }
             } catch(e) {
                 console.error(e);
