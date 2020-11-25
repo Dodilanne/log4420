@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from "./PageNotFoundComponent.js";
 import { ProductComponent } from './ProductComponent/ProductComponent';
 import { ProductsComponent } from "./ProductsComponent/ProductsComponent";
 import { ShoppingCartComponent } from './ShoppingCartComponent/ShoppingCartComponent';
+import { OrderComponent } from './OrderComponent/OrderComponent';
 import { configureAxios } from './config/api-config';
 
 configureAxios();
@@ -23,6 +24,7 @@ function App() {
         <Route path="/products"> <ProductsComponent/> </Route>
         <Route path="/product/:id"> <ProductComponent/> </Route>
         <Route path="/shopping-cart"> <ShoppingCartComponent/></Route>
+        <Route path="/order"><OrderComponent/></Route>
         <Route> <PageNotFoundComponent/> </Route>
       </Switch>
     </Router>
