@@ -3,9 +3,10 @@ import { Header } from '../_Common/Header.js';
 import { Footer } from '../_Common/Footer.js';
 import { useParams } from 'react-router-dom';
 import { imageMap } from '../ProductsComponent/ProductImageLoader';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { fetchProduct } from '../thunks/products-thunks';
 import { addProductToCart } from '../thunks/shopping-cart-thunks';
+import { formatPrice } from '../utils';
 
 export function ProductComponent() {
   document.title = 'OnlineShop - Produit';
@@ -14,7 +15,9 @@ export function ProductComponent() {
   const [product, setProduct] = useState();
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
+
   const [showDialog, setShowDialog] = useState(false);
+  const dialogTimeout = useRef();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,8 +32,19 @@ export function ProductComponent() {
 
   const onQuantityChangeEvent = ({ target: { value } }) => setQuantity(value);
 
+  const clearTimeouts = () => {
+    if (dialogTimeout.current) clearTimeout(dialogTimeout.current);
+  }
+
+  useEffect(() => clearTimeouts, []);
+
   const addItem = async () => {
     const res = await addProductToCart({ productId: id, quantity });
+    if (res.success) {
+      clearTimeouts();
+      setShowDialog(true);
+      dialogTimeout.current = setTimeout(() => setShowDialog(false), 5000);
+    }
   };
 
   let content;
@@ -86,13 +100,15 @@ export function ProductComponent() {
               </button>
             </form>
             <p>
-              Prix: <strong id='product-price'>{product.price}</strong>
+              Prix: <strong id='product-price'>{formatPrice(product.price)}</strong>
             </p>
           </div>
         </div>
-        <div className='dialog' id='dialog'>
-          Le produit a été ajouté au panier.
-        </div>
+        {showDialog && (
+          <div className='dialog' id='dialog'>
+            Le produit a été ajouté au panier.
+          </div>
+        )}
       </article>
     );
   } else {
