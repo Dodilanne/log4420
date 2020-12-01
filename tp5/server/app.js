@@ -20,23 +20,29 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // initialize the session
-app.use(session({
-  secret: 'log4420',
-  resave: false,
-  saveUninitialized: true,
-  cookie: {
-    path: '/',
-    maxAge: 1000 * 60 * 24, // 24 hours
-    secure: false
-  }
-}));
+app.use(
+  session({
+    secret: "log4420",
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      domain: false,
+      path: "/",
+      maxAge: 1000 * 60 * 24, // 24 hours
+      secure: false,
+    },
+  })
+);
 
 // CORS
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Credentials', true);
-  res.header('Access-Control-Allow-Origin', req.headers.origin);
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-  res.header('Access-Control-Allow-Headers', 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header("Access-Control-Allow-Origin", req.headers.origin);
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept"
+  );
   next();
 });
 

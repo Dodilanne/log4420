@@ -30,7 +30,7 @@ export function pad(number, width, symbol) {
     : new Array(width - numberStr.length + 1).join(symbolStr) + numberStr;
 }
 
-export const tryCatchWrapper = async (func) => {
+export const tryCatchWrapper = async func => {
   try {
     const data = await func();
     return { success: true, data };
@@ -38,3 +38,9 @@ export const tryCatchWrapper = async (func) => {
     return { success: false };
   }
 };
+
+export const deepParseInt = obj =>
+  Object.keys(obj).reduce(
+    (res, key) => ({ ...res, [key]: parseInt(obj[key]) }),
+    {}
+  );

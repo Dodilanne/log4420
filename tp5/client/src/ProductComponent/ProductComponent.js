@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { imageMap } from '../ProductsComponent/ProductImageLoader';
 import { useEffect, useState } from 'react';
 import { fetchProduct } from '../thunks/products-thunks';
+import { addProductToCart } from '../thunks/shopping-cart-thunks';
 
 export function ProductComponent() {
   document.title = 'OnlineShop - Produit';
@@ -13,6 +14,7 @@ export function ProductComponent() {
   const [product, setProduct] = useState();
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
+  const [showDialog, setShowDialog] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,6 +28,10 @@ export function ProductComponent() {
   }, [id]);
 
   const onQuantityChangeEvent = ({ target: { value } }) => setQuantity(value);
+
+  const addItem = async () => {
+    const res = await addProductToCart({ productId: id, quantity });
+  };
 
   let content;
   if (loading) {
@@ -54,7 +60,7 @@ export function ProductComponent() {
             <section>
               <h2>Caractéristiques</h2>
               <ul id='product-features'>
-                {product.features.map((feature) => (
+                {product.features.map(feature => (
                   <li key={feature}>{feature}</li>
                 ))}
               </ul>
@@ -70,7 +76,12 @@ export function ProductComponent() {
                 value={quantity}
                 onChange={onQuantityChangeEvent}
               />
-              <button className='btn' title='Ajouter au panier' type='submit'>
+              <button
+                className='btn'
+                title='Ajouter au panier'
+                type='button'
+                onClick={addItem}
+              >
                 <i className='fa fa-cart-plus'></i>&nbsp; Ajouter
               </button>
             </form>

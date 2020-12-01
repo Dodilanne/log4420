@@ -25,7 +25,7 @@ router.get("/:id", (req, res) => {
 
 // Adds a new item in the shopping cart.
 router.post("/", (req, res) => {
-  shoppingCartManager.addItem(req.body).done(err => {
+  shoppingCartManager.addItem(req.body).done((err) => {
     if (err) {
       res.status(400).send();
     } else {
@@ -36,8 +36,11 @@ router.post("/", (req, res) => {
 
 // Updates the quantity associated with the specified product ID.
 router.put("/:id", (req, res) => {
-  const status = shoppingCartManager.updateItemQuantity(req.params.id, req.body.quantity);
-  switch(status) {
+  const status = shoppingCartManager.updateItemQuantity(
+    req.params.id,
+    req.body.quantity
+  );
+  switch (status) {
     case 0:
       res.status(204).send();
       break;
