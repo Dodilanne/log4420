@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { tryCatchWrapper } from '../utils';
+import { tryCatchWrapper } from '../../utils';
 
 export const fetchProduct = async productID =>
   tryCatchWrapper(async () => {

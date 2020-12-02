@@ -10,7 +10,7 @@ import { ProductComponent } from './ProductComponent/ProductComponent';
 import { ProductsComponent } from "./ProductsComponent/ProductsComponent";
 import { ShoppingCartComponent } from './ShoppingCartComponent/ShoppingCartComponent';
 import { OrderComponent } from './OrderComponent/OrderComponent';
-import { configureAxios } from './config/api-config';
+import { configureAxios } from './foundation/config/api-config';
 
 configureAxios();
 

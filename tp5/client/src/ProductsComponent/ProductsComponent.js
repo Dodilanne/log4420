@@ -4,7 +4,7 @@ import { Footer } from '../_Common/Footer.js';
 import { SingleProductPart } from './SingleProductPart';
 import { useEffect, useState } from 'react';
 import { applyCategory, applySortingCriteria } from './ProductsUtil.js';
-import { fetchProducts } from '../thunks/products-thunks';
+import { fetchProducts } from '../foundation/thunks/products-thunks';
 
 export function ProductsComponent() {
   document.title = 'OnlineShop - Produits';

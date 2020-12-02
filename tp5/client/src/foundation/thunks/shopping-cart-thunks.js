@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { deepParseInt, tryCatchWrapper } from '../utils';
+import { deepParseInt, tryCatchWrapper } from '../../utils';
 
 export const fetchCart = async () =>
   tryCatchWrapper(async () => {
