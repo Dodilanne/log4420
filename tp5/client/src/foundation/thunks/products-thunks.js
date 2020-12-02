@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { tryCatchWrapper } from '../../utils';
+import { productsActions } from '../store/products-reducer';
 
 export const fetchProduct = async productID =>
   tryCatchWrapper(async () => {
@@ -7,8 +8,8 @@ export const fetchProduct = async productID =>
     return res.data;
   });
 
-export const fetchProducts = async () =>
+export const fetchProducts = () => async dispatch =>
   tryCatchWrapper(async () => {
     const res = await axios.get(`/products`);
-    return res.data;
+    dispatch(productsActions.populate(res.data));
   });
