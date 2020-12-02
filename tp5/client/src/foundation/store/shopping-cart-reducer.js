@@ -1,8 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const initialState = [];
+
 const shoppingCartSlice = createSlice({
   name: 'shoppingCart',
-  initialState: [],
+  initialState,
   reducers: {
     populate: (_state, action) => action.payload,
     addItem: (state, action) => [...state, action.payload],
@@ -13,6 +15,7 @@ const shoppingCartSlice = createSlice({
       if (itemIndex > -1) state[itemIndex] = payload;
       return state;
     },
+    clear: () => initialState,
   },
 });
 

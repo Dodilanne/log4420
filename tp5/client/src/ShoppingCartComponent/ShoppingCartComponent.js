@@ -2,12 +2,15 @@ import '../css/App.css';
 import { Header } from '../_Common/Header.js';
 import { Footer } from '../_Common/Footer.js';
 import { arrayFindByKey, formatPrice } from '../utils.js';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useCallback } from 'react';
 import ShoppingCartItem from './ShoppingCartItem';
+import { clearCart } from '../foundation/thunks/shopping-cart-thunks';
 
 export function ShoppingCartComponent() {
   document.title = 'OnlineShop - Panier';
+
+  const dispatch = useDispatch();
 
   const ordersItems = useSelector(state =>
     state.shoppingCart.map(item => {
@@ -24,6 +27,10 @@ export function ShoppingCartComponent() {
     () => ordersItems.reduce((total, item) => total + item.total, 0),
     [ordersItems]
   );
+
+  const clear = () => {
+    dispatch(clearCart());
+  }
 
   return (
     <div>
@@ -60,7 +67,7 @@ export function ShoppingCartComponent() {
                 <a className='btn pull-right' href='./order.html'>
                   Commander <i className='fa fa-angle-double-right'></i>
                 </a>
-                <button className='btn' id='remove-all-items-button'>
+                <button className='btn' id='remove-all-items-button' onClick={clear}>
                   <i className='fa fa-trash-o'></i>&nbsp; Vider le panier
                 </button>
               </>

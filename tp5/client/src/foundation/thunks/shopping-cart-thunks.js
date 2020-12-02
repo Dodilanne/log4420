@@ -38,3 +38,10 @@ export const addProductToCart = data => async (dispatch, getState) =>
       })
     );
   });
+
+export const clearCart = () => async dispatch =>
+  tryCatchWrapper(async () => {
+    await axios.delete('/shopping-cart');
+    dispatch(shoppingCartActions.clear());
+    return true;
+  });
