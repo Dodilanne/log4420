@@ -1,6 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { updateProductQuantity } from '../foundation/thunks/shopping-cart-thunks';
+import {
+  removeProductFromCart,
+  updateProductQuantity,
+} from '../foundation/thunks/shopping-cart-thunks';
 import { formatPrice } from '../utils';
 
 const ShoppingCartItem = ({
@@ -20,10 +23,18 @@ const ShoppingCartItem = ({
 
   const removeOne = () => updateQuantity(quantity - 1);
 
+  const removeItem = () => {
+    dispatch(removeProductFromCart(parseInt(id)));
+  };
+
   return (
     <tr>
       <td>
-        <button className='remove-item-button' title='Supprimer'>
+        <button
+          className='remove-item-button'
+          title='Supprimer'
+          onClick={removeItem}
+        >
           <i className='fa fa-times'></i>
         </button>
       </td>

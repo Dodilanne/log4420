@@ -39,6 +39,13 @@ export const addProductToCart = data => async (dispatch, getState) =>
     );
   });
 
+export const removeProductFromCart = productId => async dispatch =>
+  tryCatchWrapper(async () => {
+    await axios.delete(`/shopping-cart/${productId}`);
+    dispatch(shoppingCartActions.removeItem(productId));
+    return true;
+  });
+
 export const clearCart = () => async dispatch =>
   tryCatchWrapper(async () => {
     await axios.delete('/shopping-cart');
