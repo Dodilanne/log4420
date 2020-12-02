@@ -1,53 +1,19 @@
-import './css/App.css';
-import './css/style.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { ConfirmationComponent } from './ConfirmationComponent/ConfirmationComponent.js';
-import { HomeComponent } from './HomeComponent/HomeComponent.js';
-import { ContactComponent } from './ContactComponent/ContactComponent.js';
-import { PageNotFoundComponent } from './PageNotFoundComponent.js';
-import { ProductComponent } from './ProductComponent/ProductComponent';
-import { ProductsComponent } from './ProductsComponent/ProductsComponent';
-import { ShoppingCartComponent } from './ShoppingCartComponent/ShoppingCartComponent';
-import { OrderComponent } from './OrderComponent/OrderComponent';
+import { PersistGate } from 'redux-persist/integration/react';
 import { configureAxios } from './foundation/config/api-config';
 import { createStore } from './foundation/config/store-config';
+import Router from './foundation/Router/Router';
 
 configureAxios();
 
-const store = createStore();
+const { store, persistor } = createStore();
 
 function App() {
   return (
     <Provider store={store}>
-      <Router>
-        <Switch>
-          <Route exact path='/'>
-            <HomeComponent />
-          </Route>
-          <Route path='/confirmation'>
-            <ConfirmationComponent />
-          </Route>
-          <Route path='/contact'>
-            <ContactComponent />
-          </Route>
-          <Route path='/products'>
-            <ProductsComponent />
-          </Route>
-          <Route path='/product/:id'>
-            <ProductComponent />
-          </Route>
-          <Route path='/shopping-cart'>
-            <ShoppingCartComponent />
-          </Route>
-          <Route path='/order'>
-            <OrderComponent />
-          </Route>
-          <Route>
-            <PageNotFoundComponent />
-          </Route>
-        </Switch>
-      </Router>
+      <PersistGate loading={null} persistor={persistor}>
+        <Router />
+      </PersistGate>
     </Provider>
   );
 }

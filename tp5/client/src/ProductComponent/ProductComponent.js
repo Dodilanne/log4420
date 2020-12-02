@@ -3,31 +3,19 @@ import { Header } from '../_Common/Header.js';
 import { Footer } from '../_Common/Footer.js';
 import { useParams } from 'react-router-dom';
 import { imageMap } from '../ProductsComponent/ProductImageLoader';
-import { useEffect, useState } from 'react';
-import { fetchProduct } from '../foundation/thunks/products-thunks';
+import { useState } from 'react';
 import { addProductToCart } from '../foundation/thunks/shopping-cart-thunks';
-import { formatPrice } from '../utils';
+import { formatPrice, arrayFindByID } from '../utils';
 import useDialog from '../foundation/hooks/useDialog';
+import { useSelector } from 'react-redux';
 
 export function ProductComponent() {
   document.title = 'OnlineShop - Produit';
   const { id } = useParams();
 
-  const [product, setProduct] = useState();
-  const [loading, setLoading] = useState(true);
+  const product = useSelector(state => arrayFindByID(state.products, id));
   const [quantity, setQuantity] = useState(1);
   const dialog = useDialog();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetchProduct(id);
-      if (res.success) {
-        setProduct(res.data);
-      }
-      setLoading(false);
-    };
-    fetchData();
-  }, [id]);
 
   const onQuantityChangeEvent = ({ target: { value } }) => setQuantity(value);
 
@@ -37,13 +25,7 @@ export function ProductComponent() {
   };
 
   let content;
-  if (loading) {
-    content = (
-      <article>
-        <div className='loading'></div>
-      </article>
-    );
-  } else if (product) {
+  if (product) {
     content = (
       <article>
         <h1 id='product-name'>{product.name}</h1>

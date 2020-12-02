@@ -44,3 +44,6 @@ export const deepParseInt = obj =>
     (res, key) => ({ ...res, [key]: parseInt(obj[key]) }),
     {}
   );
+
+export const arrayFindByID = (array, id) =>
+  array.length && array.find(item => item.id === parseInt(id));

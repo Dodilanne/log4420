@@ -1,25 +1,16 @@
 import '../css/App.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Header } from '../_Common/Header.js';
 import { Footer } from '../_Common/Footer.js';
 import { SingleProductPart } from './SingleProductPart';
 import { useEffect, useState } from 'react';
 import { applyCategory, applySortingCriteria } from './ProductsUtil.js';
-import { fetchProducts } from '../foundation/thunks/products-thunks';
 
 export function ProductsComponent() {
   document.title = 'OnlineShop - Produits';
 
-  const dispatch = useDispatch();
   const products = useSelector(state => state.products);
-  const [loading, setLoading] = useState(!!products);
-
-  useEffect(() => {
-    setLoading(!products.length);
-    if (!products.length) {
-      dispatch(fetchProducts());
-    }
-  }, [products]);
+  const [loading] = useState(false);
 
   const [cat, setCat] = useState('all');
   const [sort, setSort] = useState('price-asc');
