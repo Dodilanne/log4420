@@ -1,29 +1,40 @@
 import axios from 'axios';
 import { deepParseInt, tryCatchWrapper } from '../../utils';
+import { shoppingCartActions } from '../store/shopping-cart-reducer';
 
-export const fetchCart = async () =>
+export const fetchCart = () => async dispatch =>
   tryCatchWrapper(async () => {
     const res = await axios.get('/shopping-cart');
-    return res.data;
+    dispatch(shoppingCartActions.populate(res.data));
   });
 
-export const updateProductQuantity = async ({ productId, quantity }) =>
-  tryCatchWrapper(async () =>
-    axios.put(`/shopping-cart/${productId}`, { quantity })
-  );
+export const updateProductQuantity = ({
+  productId,
+  quantity,
+}) => async dispatch =>
+  tryCatchWrapper(async () => {
+    await axios.put(`/shopping-cart/${productId}`, { quantity });
+    dispatch(shoppingCartActions.updateItem({ productId, quantity }));
+    return true;
+  });
 
-export const addProductToCart = async data =>
+export const addProductToCart = data => async (dispatch, getState) =>
   tryCatchWrapper(async () => {
     const payload = deepParseInt(data);
-    const cart = (await fetchCart()).data;
-    if (!cart) throw new Error('Cart not found');
-    const itemFound = cart.find(item => item.productId === payload.productId);
+    const { shoppingCart } = getState();
+    const itemFound = shoppingCart.find(
+      ({ productId }) => productId === payload.productId
+    );
     if (!itemFound) {
-      return axios.post('/shopping-cart', payload);
+      await axios.post('/shopping-cart', payload);
+      dispatch(shoppingCartActions.addItem(payload));
+      return true;
     }
 
-    return updateProductQuantity({
-      ...payload,
-      quantity: itemFound.quantity + payload.quantity,
-    });
+    return dispatch(
+      updateProductQuantity({
+        ...payload,
+        quantity: itemFound.quantity + payload.quantity,
+      })
+    );
   });

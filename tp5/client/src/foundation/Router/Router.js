@@ -12,13 +12,17 @@ import { ProductsComponent } from '../../ProductsComponent/ProductsComponent';
 import { ShoppingCartComponent } from '../../ShoppingCartComponent/ShoppingCartComponent';
 import { OrderComponent } from '../../OrderComponent/OrderComponent';
 import { fetchProducts } from '../thunks/products-thunks';
+import { fetchCart } from '../thunks/shopping-cart-thunks';
 
 const Router = () => {
   const dispatch = useDispatch();
 
-  // Fetch all data at startup
+  // Fetch all data once
+  // It will then be kept in the redux persistor until next refresh
+  // (i.e. next time this useEffect hook will be called)
   useEffect(() => {
     dispatch(fetchProducts());
+    dispatch(fetchCart());
   }, []);
 
   return (

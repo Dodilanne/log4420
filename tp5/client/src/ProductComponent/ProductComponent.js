@@ -5,22 +5,25 @@ import { useParams } from 'react-router-dom';
 import { imageMap } from '../ProductsComponent/ProductImageLoader';
 import { useState } from 'react';
 import { addProductToCart } from '../foundation/thunks/shopping-cart-thunks';
-import { formatPrice, arrayFindByID } from '../utils';
+import { formatPrice, arrayFindByKey } from '../utils';
 import useDialog from '../foundation/hooks/useDialog';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 export function ProductComponent() {
   document.title = 'OnlineShop - Produit';
   const { id } = useParams();
 
-  const product = useSelector(state => arrayFindByID(state.products, id));
+  const dispatch = useDispatch();
+  const product = useSelector(state =>
+    arrayFindByKey(state.products, id, 'id')
+  );
   const [quantity, setQuantity] = useState(1);
   const dialog = useDialog();
 
   const onQuantityChangeEvent = ({ target: { value } }) => setQuantity(value);
 
   const addItem = async () => {
-    const res = await addProductToCart({ productId: id, quantity });
+    const res = await dispatch(addProductToCart({ productId: id, quantity }));
     if (res.success) dialog.show();
   };
 

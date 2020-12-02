@@ -45,5 +45,5 @@ export const deepParseInt = obj =>
     {}
   );
 
-export const arrayFindByID = (array, id) =>
-  array.length && array.find(item => item.id === parseInt(id));
+export const arrayFindByKey = (array, value, key = 'productId') =>
+  array.length && array.find(item => item[key] === parseInt(value));
