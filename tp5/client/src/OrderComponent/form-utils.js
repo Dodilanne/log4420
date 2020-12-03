@@ -14,7 +14,7 @@ export const validationSchema = Joi.object({
         !!value.match(
           /^(\+?1-?)?(\([2-9]([02-9]\d|1[02-9])\)|[2-9]([02-9]\d|1[02-9]))-?[2-9]\d{2}-?\d{4}$/
         );
-      return isValid || helper.message('Bad phone number');
+      return isValid ? value : helper.message('Bad phone number');
     })
     .required(),
   creditCard: Joi.string().creditCard().required(),

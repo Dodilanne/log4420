@@ -2,17 +2,10 @@
 
 const Q = require("q");
 const mongoose = require("mongoose");
-const validator = require('validator');
+const validator = require("validator");
 const Order = mongoose.model("Order");
 
-const MODEL = [
-  "id",
-  "firstName",
-  "lastName",
-  "email",
-  "phone",
-  "products"
-];
+const MODEL = ["id", "firstName", "lastName", "email", "phone", "products"];
 
 const self = {};
 
@@ -25,13 +18,15 @@ const self = {};
  */
 self.getOrders = () => {
   const deferred = Q.defer();
-  Order.find({}, { _id: 0 }).lean().exec((err, orders) => {
-    if (err) {
-      deferred.resolve({ err: false, data: [] });
-    } else {
-      deferred.resolve({ err: false, data: orders });
-    }
-  });
+  Order.find({}, { _id: 0 })
+    .lean()
+    .exec((err, orders) => {
+      if (err) {
+        deferred.resolve({ err: false, data: [] });
+      } else {
+        deferred.resolve({ err: false, data: orders });
+      }
+    });
   return deferred.promise;
 };
 
@@ -43,15 +38,17 @@ self.getOrders = () => {
  *                        - err: indicates if there is an error (TRUE/FALSE);
  *                        - data: the order associated with the ID specified.
  */
-self.getOrder = orderId => {
+self.getOrder = (orderId) => {
   const deferred = Q.defer();
-  Order.findOne({ id: orderId }, { _id: 0 }).lean().exec((err, order) => {
-    if (err || !order) {
-      deferred.resolve({ err: true, data: null });
-    } else {
-      deferred.resolve({ err: false, data: order });
-    }
-  });
+  Order.findOne({ id: orderId }, { _id: 0 })
+    .lean()
+    .exec((err, order) => {
+      if (err || !order) {
+        deferred.resolve({ err: true, data: null });
+      } else {
+        deferred.resolve({ err: false, data: order });
+      }
+    });
   return deferred.promise;
 };
 
@@ -61,14 +58,16 @@ self.getOrder = orderId => {
  * @param order           The order to create in the database.
  * @returns {promise|*}   A promise object that indicates if an error occurred during the deletion (TRUE/FALSE).
  */
-self.createOrder = order => {
+self.createOrder = (order) => {
   const deferred = Q.defer();
   const productsManager = require("./products");
-  productsManager.getProducts().done(result => {
+  productsManager.getProducts().done((result) => {
     const productsList = result.data;
 
-    let isValid = MODEL.every(property => property in order);
-    if (!isValid) { // Missing properties
+    let isValid = MODEL.every((property) => property in order);
+    if (!isValid) {
+      // Missing properties
+      console.log("prop missing");
       deferred.resolve(true);
       return deferred.promise;
     }
@@ -77,28 +76,41 @@ self.createOrder = order => {
     isValid &= !!validator.trim(order.firstName);
     isValid &= !!validator.trim(order.lastName);
     isValid &= validator.isEmail(order.email);
-    isValid &= validator.isMobilePhone(validator.whitelist(order.phone, "0123456789"), "en-CA");
-    isValid &= order.products instanceof Array && order.products.every(product => {
-      let productIsValid = true;
-      productIsValid &= "id" in product;
-      productIsValid &= "quantity" in product;
-      if (!productIsValid) {
-        return false;
-      }
-      productIsValid &= !isNaN(product.id) && typeof order.id === "number";
-      productIsValid &= productsList.find(d => d.id === product.id) !== undefined;
-      productIsValid &= !isNaN(product.quantity) && typeof product.quantity === "number" && product.quantity > 0;
-      return productIsValid;
-    });
-    if (!isValid) { // Invalid data
+    isValid &= validator.isMobilePhone(
+      validator.whitelist(order.phone, "0123456789"),
+      "en-CA"
+    );
+    isValid &=
+      order.products instanceof Array &&
+      order.products.every((product) => {
+        let productIsValid = true;
+        productIsValid &= "id" in product;
+        productIsValid &= "quantity" in product;
+        if (!productIsValid) {
+          return false;
+        }
+        productIsValid &= !isNaN(product.id) && typeof order.id === "number";
+        productIsValid &=
+          productsList.find((d) => d.id === product.id) !== undefined;
+        productIsValid &=
+          !isNaN(product.quantity) &&
+          typeof product.quantity === "number" &&
+          product.quantity > 0;
+        return productIsValid;
+      });
+    if (!isValid) {
+      // Invalid data
+      console.log("invalid data");
       deferred.resolve(true);
       return deferred.promise;
     }
 
-    self.getOrder(order.id).done(result => {
+    self.getOrder(order.id).done((result) => {
+      console.log(result);
       if (result.data === null) {
-        new Order(order).save(err => deferred.resolve(err));
+        new Order(order).save((err) => deferred.resolve(err));
       } else {
+        console.log("already exists");
         deferred.resolve(true);
       }
     });
@@ -112,17 +124,19 @@ self.createOrder = order => {
  * @param orderId         The order ID associated with the order to delete.
  * @returns {promise|*}   A promise object that indicates if an error occurred during the deletion (TRUE/FALSE).
  */
-self.deleteOrder = orderId => {
+self.deleteOrder = (orderId) => {
   const deferred = Q.defer();
-  Order.findOne({ id: orderId }).lean().exec((err, product) => {
-    if (err || !product) {
-      deferred.resolve(true);
-    } else {
-      Order.remove({ id: orderId }, err => {
-        deferred.resolve(err);
-      });
-    }
-  });
+  Order.findOne({ id: orderId })
+    .lean()
+    .exec((err, product) => {
+      if (err || !product) {
+        deferred.resolve(true);
+      } else {
+        Order.remove({ id: orderId }, (err) => {
+          deferred.resolve(err);
+        });
+      }
+    });
   return deferred.promise;
 };
 
@@ -133,7 +147,7 @@ self.deleteOrder = orderId => {
  */
 self.deleteOrders = () => {
   const deferred = Q.defer();
-  Order.remove({}, err => deferred.resolve(err));
+  Order.remove({}, (err) => deferred.resolve(err));
   return deferred.promise;
 };
 

@@ -13,6 +13,7 @@ import { ShoppingCartComponent } from '../../ShoppingCartComponent/ShoppingCartC
 import { OrderComponent } from '../../OrderComponent/OrderComponent';
 import { fetchProducts } from '../thunks/products-thunks';
 import { fetchCart } from '../thunks/shopping-cart-thunks';
+import { fetchOrders } from '../thunks/orders-thunks';
 
 const Router = () => {
   const dispatch = useDispatch();
@@ -21,8 +22,7 @@ const Router = () => {
   // It will then be kept in the redux persistor until next refresh
   // (i.e. next time this useEffect hook will be called)
   useEffect(() => {
-    dispatch(fetchProducts());
-    dispatch(fetchCart());
+    [fetchProducts, fetchCart, fetchOrders].forEach(thunk => dispatch(thunk()));
   }, []);
 
   return (
