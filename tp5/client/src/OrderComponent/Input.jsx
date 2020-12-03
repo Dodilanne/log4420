@@ -12,7 +12,10 @@ const Input = ({ name, label, type = 'text', placeholder = undefined }) => {
     <div className='col'>
       <div className='form-group'>
         <label className={errorClass}>
-          {label}
+          <>
+            {label}
+            {errors[name] && ` -  ${errors[name].message}`}
+          </>
         </label>
         <input
           className={`form-control ${errorClass}`}

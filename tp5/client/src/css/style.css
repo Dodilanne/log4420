@@ -111,9 +111,6 @@ a:hover {
   font-size: 0.8em;
   font-weight: bold;
 }
-.form-group label.error {
-  margin-top: 10px;
-}
 .form-group .form-control {
   width: 100%;
 }

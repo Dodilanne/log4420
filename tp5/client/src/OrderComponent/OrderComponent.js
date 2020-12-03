@@ -1,25 +1,16 @@
 import '../css/App.css';
 import { useForm, FormProvider } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+import { joiResolver } from '@hookform/resolvers/joi';
 import { Header } from '../_Common/Header.js';
 import { Footer } from '../_Common/Footer.js';
 import Input from './Input';
-
-const validationSchema = yup.object().shape({
-  firstName: yup.string().required(),
-  lastName: yup.string().required(),
-  email: yup.string().email().required(),
-  phone: yup.string().required(),
-  creditCard: yup.string().required(),
-  expiry: yup.string().required(),
-});
+import { validationSchema } from './form-utils';
 
 export function OrderComponent() {
   document.title = 'OnlineShop - Commande';
 
   const formMethods = useForm({
-    resolver: yupResolver(validationSchema),
+    resolver: joiResolver(validationSchema),
   });
 
   const onSubmit = data => {
