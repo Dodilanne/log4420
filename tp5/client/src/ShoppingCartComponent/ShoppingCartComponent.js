@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useCallback } from 'react';
 import ShoppingCartItem from './ShoppingCartItem';
 import { clearCart } from '../foundation/thunks/shopping-cart-thunks';
+import { Link } from 'react-router-dom';
 
 export function ShoppingCartComponent() {
   document.title = 'OnlineShop - Panier';
@@ -64,9 +65,9 @@ export function ShoppingCartComponent() {
                   Total:{' '}
                   <strong id='total-amount'>{formatPrice(getTotal())}</strong>
                 </p>
-                <a className='btn pull-right' href='./order.html'>
+                <Link className='btn pull-right' to='/order'>
                   Commander <i className='fa fa-angle-double-right'></i>
-                </a>
+                </Link>
                 <button className='btn' id='remove-all-items-button' onClick={clear}>
                   <i className='fa fa-trash-o'></i>&nbsp; Vider le panier
                 </button>
