@@ -23,8 +23,10 @@ export function ProductComponent() {
   const onQuantityChangeEvent = ({ target: { value } }) => setQuantity(value);
 
   const addItem = async () => {
-    const res = await dispatch(addProductToCart({ productId: id, quantity }));
-    if (res.success) dialog.show();
+    const { success } = await dispatch(
+      addProductToCart({ productId: id, quantity })
+    );
+    if (success) dialog.show();
   };
 
   let content;
@@ -43,7 +45,11 @@ export function ProductComponent() {
           <div className='col'>
             <section>
               <h2>Description</h2>
-              <p id='product-desc'>{product.description}</p>
+              <p
+                id='product-desc'
+                // Permet d'afficher l'hyperlien comme il faut
+                dangerouslySetInnerHTML={{ __html: product.description }}
+              />
             </section>
             <section>
               <h2>Caractéristiques</h2>
